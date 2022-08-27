@@ -1,0 +1,38 @@
+[
+    {
+        "id": "01",
+        "title": "title of the post",
+        "content": "this is the content of the post. text, text, text...",
+        "date": "20/08/2022",
+        "picture": "./public/images/mercury.jpg",
+        "sound": "#link",
+        "video": "#link"
+    },
+    {
+        "id": "02",
+        "title": "title of the post",
+        "content": "this is the content of the post. text, text, text...",
+        "date": "20/08/2022",
+        "picture": "./public/images/venus.jpg",
+        "sound": "#link",
+        "video": "#link"
+    },
+    {
+        "id": "03",
+        "title": "title of the post",
+        "content": "this is the content of the post. text, text, text...",
+        "date": "20/08/2022",
+        "picture": "./public/images/earth.jpg",
+        "sound": "#link",
+        "video": "#link"
+    },
+    {
+        "id": "04",
+        "title": "title of the post",
+        "content": "this is the content of the post. text, text, text...",
+        "date": "20/08/2022",
+        "picture": "./public/images/mars.jpg",
+        "sound": "#link",
+        "video": "#link"
+    }
+]
