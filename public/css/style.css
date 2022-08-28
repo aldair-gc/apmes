@@ -7,11 +7,13 @@
 nav {
     position: -webkit-sticky;
     position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     background: #fff;
     padding: 10px;
     height: 60px;
+    box-shadow: 0 0 5px #444;
 }
 
 #logo {
@@ -35,7 +37,7 @@ nav ul li {
 main {
     display: flex;
     flex-direction: column;
-    background: url("../images/flowers.jpg");
+    background: #000;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,12 +65,32 @@ main {
     text-align: center;
 }
 
-.post-container {
+.posts-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     margin: 20px;
+}
+
+.posts-container .filter-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.posts-container .filter-menu ul li {
+    background: #fff;
+    padding: 5px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #888;
+}
+
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .post {
@@ -78,7 +100,8 @@ main {
     min-height: 150px;
     width: 100%;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
+    box-shadow: 0 0 5px #888;
 }
 
 .post-media {
@@ -122,4 +145,19 @@ main {
     box-shadow: 0 0 5px #555;
     border-radius: 15px;
     padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    background: #fff;
+    box-shadow: 0 0 5px #555;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.button:has(input:checked) {
+    background: #999;
 }

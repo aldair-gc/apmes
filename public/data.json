@@ -1,6 +1,7 @@
 [
     {
         "id": "01",
+        "group": "group1",
         "title": "title of the post",
         "content": "this is the content of the post. text, text, text...",
         "date": "20/08/2022",
@@ -10,6 +11,7 @@
     },
     {
         "id": "02",
+        "group": "group2",
         "title": "title of the post",
         "content": "this is the content of the post. text, text, text...",
         "date": "20/08/2022",
@@ -19,6 +21,7 @@
     },
     {
         "id": "03",
+        "group": "group1",
         "title": "title of the post",
         "content": "this is the content of the post. text, text, text...",
         "date": "20/08/2022",
@@ -28,6 +31,7 @@
     },
     {
         "id": "04",
+        "group": "group2",
         "title": "title of the post",
         "content": "this is the content of the post. text, text, text...",
         "date": "20/08/2022",
