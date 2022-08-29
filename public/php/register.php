@@ -27,9 +27,9 @@ if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 }
 
 // invalid characters validation
-if (preg_match('/^[a-zA-Z0-9]+$/', $_POST[name]) == 0) {
-    exit('Name with invalid characters!');
-}
+// if (preg_match('/^[a-zA-Z0-9]+$/', $_POST[name]) == 0) {
+//     exit('Name with invalid characters!');
+// }
 
 // character length check
 if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
