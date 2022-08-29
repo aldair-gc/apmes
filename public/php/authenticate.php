@@ -4,7 +4,7 @@ session_start();
 $DBservername = "localhost";
 $DBdatabase = "u186683530_neidebd";
 $DBusername = "u186683530_neideuser";
-$DBpassword = "0b[L$xIO=";
+$DBpassword = "G&vo~k7a";
 
 $conn = mysqli_connect($DBservername, $DBusername, $DBpassword, $DBdatabase);
 
