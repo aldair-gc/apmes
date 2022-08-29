@@ -1,69 +1,59 @@
 import postsFromDB from "../data.json" assert {type: "json"};
+import buildAllPostsEdit from "./build-posts-edit.js";
+import buildAllPosts from "./build-posts.js";
+
 const postContainer = document.querySelector(".post-container");
 
-window.onload = function() {
-    buildAllPosts(postsFromDB);
-    filterButtons();
-};
-
-function buildAllPosts(json) {
-    let innerHtmlPostsContainer = "";
-    json.forEach(x => innerHtmlPostsContainer += buildPost(x));
-    postContainer.innerHTML = innerHtmlPostsContainer;
-}
-function buildPost(data) {
-    return `<div class="post ${data.group}">
-    <img class="post-media" src=${data.picture}>
-    <div class="post-texts">
-    <div class="posts-header">
-    <div class="posts-title">${data.title}</div>
-    <div class="posts-date">${data.date}</div>
-    </div>
-    <div class="posts-content">${data.content}</div>
-    </div>
-    </div>`;
-}
-
-// store preferences on url
 const url = new URL(window.location);
+const filterMenu = document.querySelector(".filter-menu");
 
 const all = document.querySelector("#all");
 const group1 = document.querySelector("#group1");
 const group2 = document.querySelector("#group2");
+const paramAll = url.searchParams.get("all")
+const paramGroup1 = url.searchParams.get("group1")
+const paramGroup2 = url.searchParams.get("group2")
 
-function filterButtons() {
+window.onload = function () {
+    postContainer.innerHTML = buildAllPostsEdit(postsFromDB);
     if (url.searchParams.get("all") === "1") {
-        all.checked = true;
-        all.parentElement.style.background = "#aea"
+        all.classList.add("active")
     }
     if (url.searchParams.get("group1") === "1") {
-        group1.checked = true;
-        group1.parentElement.style.background = "#aea"
+        group1.classList.add("active")
     }
     if (url.searchParams.get("group2") === "1") {
-        group2.checked = true;
-        group2.parentElement.style.background = "#aea"
-    }
+        group2.classList.add("active")
+    };
 }
 
 // click filter buttons
-const filterMenu = document.querySelector(".filter-menu");
-
 filterMenu.addEventListener("click", (e) => {
-    const param = e.target.innerText;
-    if (!e.target.checked) {
-        url.searchParams.set(param, "1")
+    const filterButton = e.target.innerText; // get button's text
+    const allPosts = document.querySelectorAll(".post"); // select all these posts
+    const filters = [all, group1, group2];
+
+    // buttons colours
+    filters.forEach((x) => {
+        if (x.innerText === filterButton) {
+            x.style.background = "#027db6";
+            x.style.color = "#fff";
+        } else {
+            x.style.background = "#fff";
+            x.style.color = "#000";
+        }
+    });
+
+    // filter posts
+    if (filterButton === "all") {
+        allPosts.forEach((x) => x.classList.remove("hidden"));
     } else {
-        url.searchParams.set(param, "0")
+        allPosts.forEach((x) => {
+            if (!x.classList.contains(filterButton)) {
+                x.classList.add("hidden");
+            } else {
+                x.classList.remove("hidden");
+            };
+        });
     }
-    
-    url.searchParams.get("all") === "1"
-        ? all.parentElement.style.background = "#aea"
-        : all.parentElement.style.background = "#fff";
-    url.searchParams.get("group1") === "1"
-        ? group1.parentElement.style.background = "#aea"
-        : group1.parentElement.style.background = "#fff";
-    url.searchParams.get("group2") === "1"
-        ? group2.parentElement.style.background = "#aea"
-        : group2.parentElement.style.background = "#fff";
 });

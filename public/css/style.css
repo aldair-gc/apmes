@@ -4,21 +4,44 @@
     box-sizing: border-box;
 }
 
+.box {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px #555;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    background: linear-gradient(to bottom, #027db6, #a3d0e5);
+}
+
 nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
     padding: 10px;
     height: 60px;
     box-shadow: 0 0 5px #444;
+    z-index: 10;
 }
 
 #logo {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #000;
+    display: inherit;
+    align-items: center;
+    gap: 5px;
+}
+
+#logo img {
+    width: 50px;
 }
 
 nav ul {
@@ -30,40 +53,115 @@ nav ul {
 nav ul li {
     list-style: none;
     font-size: 1.2em;
-    background: #fff;
     padding: 10px 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    cursor: default;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    background: #000;
+    flex-grow: 2;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .intro {
+    display: flex;
     height: 600px;
     margin: 20px;
+    overflow: hidden;
+    background-image: url("../images/zac-durant-_6HzPU9Hyfg-unsplash.jpg");
+    background-position: 50% -300px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.intro img {
+    height: 100%;
+    margin: auto;
+}
+
+/* SQUARES - START */
 
 .square-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     margin: 20px;
 }
 
 .square {
-    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #cde;
     height: 300px;
     width: 300px;
     border-radius: 15px;
     padding: 20px;
-    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 0 5px #444;
+    z-index: 1;
 }
+
+.bgblur {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+
+.square h2 {
+    z-index: 2;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+#church {
+    background: url(../images/church-googlemaps-small.jpg) center;
+    background-size: cover;
+}
+
+#prayers {
+    background: url(../images/pray-g8836ac2c6_640.jpg) center;
+    background-size: cover;
+}
+
+#missions {
+    background: url(../images/missions-small.jpeg) center;
+    background-size: cover;
+}
+
+#agenda {
+    background: url(../images/calendar-2428560_640.jpg) center;
+    background-size: cover;
+}
+
+#pictures {
+    background: url(../images/church_inside_small.jpg) center;
+    background-size: cover;
+}
+
+#videos {
+    background: url(../images/clapper-board-1019607_640.jpg) center;
+    background-size: cover;
+}
+
+/* SQUARES - END */
+/* POSTS - START */
 
 .posts-container {
     display: flex;
@@ -73,35 +171,49 @@ main {
     margin: 20px;
 }
 
-.posts-container .filter-menu ul {
+.filter-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.filter-menu ul {
     list-style: none;
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
 }
 
-.posts-container .filter-menu ul li {
+.filter-menu ul li {
     background: #fff;
     padding: 5px 15px;
     border-radius: 8px;
     box-shadow: 0 0 5px #888;
 }
 
+.filter-menu ul .active {
+    background: #027db6;
+    color: #fff;
+}
+
 .post-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-around;
 }
 
 .post {
     display: flex;
     gap: 20px;
-    background: #fff;
     min-height: 150px;
-    width: 100%;
     border-radius: 15px;
     padding: 10px;
     box-shadow: 0 0 5px #888;
+    background: #fff;
+    max-width: 100%;
+    min-width: 700px;
+    flex-grow: 1;
 }
 
 .post-media {
@@ -126,6 +238,9 @@ main {
     font-size: 1.4em;
 }
 
+/* POSTS - END */
+/* FOOTER - START */
+
 .footer-container {
     display: flex;
     gap: 10px;
@@ -135,16 +250,9 @@ main {
 }
 
 .footer-col {
-    background: #fff;
     width: 30%;
     padding: 20px;
-}
-
-.box {
-    background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 0 5px #555;
-    border-radius: 15px;
-    padding: 20px;
+    text-align: center;
 }
 
 .hidden {
@@ -153,11 +261,55 @@ main {
 
 .button {
     background: #fff;
-    box-shadow: 0 0 5px #555;
+    box-shadow: 0 0 3px #555;
+    border: 0;
     border-radius: 8px;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
-.button:has(input:checked) {
-    background: #999;
+.form-box {
+    margin: 100px auto;
+    width: 500px;
+    padding: 30px;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box input {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #027db6;
+    margin-bottom: 20px;
+    padding: 0 5px;
+}
+
+.form-box button {
+    margin-top: 20px;
+    height: 40px;
+    border: 1px solid #027db6;
+    border-radius: 8px;
+    background: #027db6;
+    color: #fff;
+    font-size: large;
+}
+
+.form-box div {
+    padding-top: 10px;
+}
+
+.form-box a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin: 10px 0 10px 0;
+    text-align: right;
+}
+
+.form-box h1 {
+    margin-bottom: 30px;
 }

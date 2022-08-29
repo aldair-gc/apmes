@@ -10,28 +10,29 @@
 
 <body>
     <nav>
-        <div id="logo">Logo</div>
+        <div id="logo">
+            <img src="./public/images/logo-png-small.png" alt="Logo">
+            Apostolic & Prophetic Ministries El Shaddai
+        </div>
         <ul>
-            <li>Home</li>
-            <li>Link2</li>
-            <li>Link3</li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/feed.html">Feed</a></li>
+            <li><a href="/login.html">Login</a></li>
         </ul>
     </nav>
     <main>
-
         <div class="posts-container box">
             <div class="filter-menu">
                 <ul>
-                <label class="button">all<input id="all" type="checkbox" class="hidden"></input></label>
-                <label class="button">group1<input id="group1" type="checkbox" class="hidden"></input></label>
-                <label class="button">group2<input id="group2" type="checkbox" class="hidden"></input></label>
-            </ul>
+                    <li id="all" class="button">all</li>
+                    <li id="group1" class="button">group1</li>
+                    <li id="group2" class="button">group2</li>
+                </ul>
             </div>
             <div class="post-container">
-            <!--Posts from DB will be loaded here-->
+                <!--Posts from DB will be loaded here-->
             </div>
         </div>
-
     </main>
     <footer>
         <div class="footer-container">
