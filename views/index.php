@@ -1,5 +1,5 @@
 <?php
-include '/views/header.php';
+include '/header.php';
 ?>
 
 <main>
@@ -43,5 +43,5 @@ include '/views/header.php';
 </main>
 
 <?php
-include '/views/footer.php';
+include '/footer.php';
 ?>
