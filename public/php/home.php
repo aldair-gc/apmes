@@ -35,8 +35,8 @@ include('connect.php');
                     <li id="group2" class="button">group2</li>
                 </ul>
                 <ul>
-                    <li id="new-post-button" class="button">new post</li>
-                    <li id="new-group-button" class="button">new group</li>
+                    <li id="new-post-button" class="button"><a href="/feed-newpost.html">new post</a></li>
+                    <li id="new-group-button" class="button"><a href="/feed-newgroup.html">new group</a></li>
                 </ul>
             </div>
 
