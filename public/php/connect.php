@@ -6,12 +6,12 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
-$DBservername = "localhost";
-$DBdatabase = "u186683530_neidebd";
-$DBusername = "u186683530_neideuser";
-$DBpassword = "0b[L$xIO=";
+// $DBservername = "localhost";
+// $DBdatabase = "u186683530_neidebd";
+// $DBusername = "u186683530_neideuser";
+// $DBpassword = "0b[L$xIO=";
 
-$conn = mysqli_connect($DBservername, $DBusername, $DBpassword, $DBdatabase);
+// $conn = mysqli_connect($DBservername, $DBusername, $DBpassword, $DBdatabase);
 
 // make the connection
 if (!$conn) {
