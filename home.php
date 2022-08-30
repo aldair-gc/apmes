@@ -4,7 +4,6 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: login.html');
     exit;
 }
->?
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -61,3 +60,4 @@ if (!isset($_SESSION['loggedin'])) {
 
 </html>
 
+?>
