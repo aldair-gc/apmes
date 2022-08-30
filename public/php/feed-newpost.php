@@ -21,7 +21,7 @@ $groups = mysqli_query($conn, "SELECT * FROM groups");
 <body>
     <nav>
         <div id="logo">
-            <img src="./public/images/logo-png-small.png" alt="Logo">
+            <img src="/public/images/logo-png-small.png" alt="Logo">
             Apostolic & Prophetic Ministries El Shaddai
         </div>
         <ul>
@@ -35,10 +35,10 @@ $groups = mysqli_query($conn, "SELECT * FROM groups");
         <div class="posts-container box">
             <div class="filter-menu">
                 <ul>
-                    <li id="back-to-editor-button" class="button"><a href="/feed-editor.html">back</a></li>
+                    <li id="back-to-editor-button" class="button"><a href="/home.php">back</a></li>
                 </ul>
                 <ul>
-                    <li id="new-group-button" class="button"><a href="/feed-newgroup.html">new group</a></li>
+                    <li id="new-group-button" class="button"><a href="/feed-newgroup.php">new group</a></li>
                 </ul>
             </div>
 
@@ -48,12 +48,7 @@ $groups = mysqli_query($conn, "SELECT * FROM groups");
 
                     <form action="/public/php/newpost.php" method="post">
                         <label for="groupname">Group:</label>
-                        <input list="groups" name="groupname" id="groupname">
-                        <datalist id="groups">
-                            <?php while ($row = mysqli_fetch_array($groups)) { ?>
-                                <option value="<?php echo $row['groupname']; ?>">
-                            <?php } ?>
-                        </datalist>
+                        <input type="text" name="groupname" id="groupname">
 
                         <label for="title">Title:</label>
                         <input type="text" name="title" id="title">
@@ -78,7 +73,7 @@ $groups = mysqli_query($conn, "SELECT * FROM groups");
             <div class="footer-col">footer3</div>
         </div>
     </footer>
-    <script src="./public/js/script.js" type="module"></script>
+    <script src="/public/js/script.js" type="module"></script>
 </body>
 
 </html>
