@@ -16,7 +16,7 @@ include('connect.php');
 <body>
     <nav>
         <div id="logo">
-            <img src="./public/images/logo-png-small.png" alt="Logo">
+            <img src="/public/images/logo-png-small.png" alt="Logo">
             Apostolic & Prophetic Ministries El Shaddai
         </div>
         <ul>
@@ -53,7 +53,7 @@ include('connect.php');
             <div class="footer-col">footer3</div>
         </div>
     </footer>
-    <script src="./public/js/script.js" type="module"></script>
+    <script src="/public/js/script.js" type="module"></script>
 </body>
 
 </html>
