@@ -9,7 +9,7 @@ include('connect.php');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Feed editor</title>
+    <title>Apostolic & Prophetic Ministries El Shaddai</title>
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
 </head>
 
@@ -57,4 +57,3 @@ include('connect.php');
 </body>
 
 </html>
-
