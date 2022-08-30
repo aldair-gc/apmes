@@ -1,9 +1,6 @@
 <?php
-session_start();
-if (!isset($_SESSION['loggedin'])) {
-    header('Location: login.html');
-    exit;
-}
+include('connect.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +9,7 @@ if (!isset($_SESSION['loggedin'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Apostolic & Prophetic Ministries El Shaddai</title>
+    <title>Feed editor</title>
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
 </head>
 
@@ -32,14 +29,14 @@ if (!isset($_SESSION['loggedin'])) {
 
         <div class="posts-container box">
             <div class="filter-menu">
-                <ul>
+                <ul id="filters">
                     <li id="all" class="button active">all</li>
                     <li id="group1" class="button">group1</li>
                     <li id="group2" class="button">group2</li>
                 </ul>
                 <ul>
-                    <li id="new-post" class="button">new post</li>
-                    <li id="new-post" class="button">new group</li>
+                    <li id="new-post-button" class="button">new post</li>
+                    <li id="new-group-button" class="button">new group</li>
                 </ul>
             </div>
 

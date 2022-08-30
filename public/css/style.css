@@ -30,6 +30,8 @@ nav {
     height: 60px;
     box-shadow: 0 0 5px #444;
     z-index: 10;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
 }
 
 #logo {
@@ -59,7 +61,7 @@ nav ul li {
 nav a {
     text-decoration: none;
     color: #000;
-    cursor: default;
+    cursor: pointer;
 }
 
 main {
@@ -104,13 +106,14 @@ main {
     align-items: center;
     justify-content: center;
     background: #cde;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     border-radius: 15px;
     padding: 20px;
     overflow: hidden;
     box-shadow: 0 0 5px #444;
     z-index: 1;
+    text-align: center;
 }
 
 .bgblur {
@@ -184,16 +187,24 @@ main {
     margin-bottom: 10px;
 }
 
-.filter-menu ul li {
+.filter-menu ul li,
+.filter-menu .button {
     background: #fff;
     padding: 5px 15px;
     border-radius: 8px;
     box-shadow: 0 0 5px #888;
+    height: 30px;
 }
 
 .filter-menu ul .active {
     background: #027db6;
     color: #fff;
+}
+
+.filter-menu a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
 }
 
 .post-container {
@@ -236,6 +247,12 @@ main {
 
 .posts-title {
     font-size: 1.4em;
+}
+
+.post-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 /* POSTS - END */
@@ -313,3 +330,41 @@ main {
 .form-box h1 {
     margin-bottom: 30px;
 }
+
+/* new post - start */
+
+.new-post .post {
+    padding: 40px;
+}
+
+.new-post form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.new-post input,
+.new-post textarea {
+    border: 1px solid #027db6;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.new-post label {
+    margin-top: 10px;
+}
+
+.new-post .post {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-post input[type=button] {
+    margin: 40px auto 0 auto;
+    background: #027db6;
+    color: #fff;
+    font-size: larger;
+    width: 50%;
+}
+
+/* new post - end */

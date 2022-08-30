@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Apostolic & Prophetic Ministries</title>
+    <title>Apostolic & Prophetic Ministries El Shaddai</title>
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
 </head>
 
@@ -24,16 +24,28 @@
 
         <div class="posts-container box">
             <div class="filter-menu">
-                <ul id="filters">
-                    <li id="all" class="button active">all</li>
-                    <li id="group1" class="button">group1</li>
-                    <li id="group2" class="button">group2</li>
+                <ul>
+                    <li id="back-to-editor-button" class="button"><a href="/feed-editor.html">back</a></li>
+                </ul>
+                <ul>
+                    <li id="new-group-button" class="button"><a href="/feed-newpost.html">new post</a></li>
                 </ul>
             </div>
-            <div class="post-container">
-                <!--Posts from DB will be loaded here-->
+
+            <div class="new-post">
+                <div class="post">
+                    <h2>Create new group</h2>
+
+                    <form action="/public/php/newgroup.php" method="post">
+                        <label for="groupname">Group name:</label>
+                        <input type="text" name="groupname" id="groupname">
+
+                        <input type="button" value="Save">
+                    </form>
+                </div>
             </div>
         </div>
+
     </main>
     <footer>
         <div class="footer-container">

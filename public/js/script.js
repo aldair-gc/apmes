@@ -5,7 +5,7 @@ import buildAllPosts from "./build-posts.js";
 const postContainer = document.querySelector(".post-container");
 
 const url = new URL(window.location);
-const filterMenu = document.querySelector(".filter-menu");
+const filters = document.querySelector("#filters");
 
 const all = document.querySelector("#all");
 const group1 = document.querySelector("#group1");
@@ -28,10 +28,13 @@ window.onload = function () {
 }
 
 // click filter buttons
-filterMenu.addEventListener("click", (e) => {
+filters.addEventListener("click", (e) => {
     const filterButton = e.target.innerText; // get button's text
     const allPosts = document.querySelectorAll(".post"); // select all these posts
     const filters = [all, group1, group2];
+
+    // check if the target is a button
+    if (!e.target.classList.contains("button")) return;
 
     // buttons colours
     filters.forEach((x) => {

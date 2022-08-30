@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: /login.html');
+    exit;
+}
+
 $DBservername = "localhost";
 $DBdatabase = "u186683530_neidebd";
 $DBusername = "u186683530_neideuser";
@@ -10,8 +17,3 @@ $conn = mysqli_connect($DBservername, $DBusername, $DBpassword, $DBdatabase);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-
-// code here
-
-$conn->close();
-?>

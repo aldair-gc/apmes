@@ -34,7 +34,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['email'] = $_POST['email'];
             $_SESSION['id'] = $id;
-            header('Location: home.php');
+            header('Location: /public/php/home.php');
         } else {
             echo 'Incorrect email and/or password!';
         }

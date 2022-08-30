@@ -45,11 +45,11 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
     if ($stmt->num_rows > 0) {
         echo 'This email is already registered.';
     } else {
-        if ($stmt = $conn->prepare('INSERT INTO accounts (name, password, email) VALUES (?, ?, ?)') {
+        if ($stmt = $conn->prepare('INSERT INTO accounts (name, password, email) VALUES (?, ?, ?)')) {
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $stmt->bind_param('sss', $_POST['name'], $password, $_POST['email']);
             $stmt->execute();
-            header('Location: home.php');
+            header('Location: /public/php/home.php');
         } else {
             echo 'Error proccessing register request!';
         }

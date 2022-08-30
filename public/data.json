@@ -1,42 +1,34 @@
 [
     {
         "id": "01",
-        "group": "group1",
+        "groupname": "group1",
         "title": "title of the post",
-        "content": "this is the content of the post. text, text, text...",
+        "content": "this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post. text, text, text...",
         "date": "20/08/2022",
-        "picture": "./public/images/mercury.jpg",
-        "sound": "#link",
-        "video": "#link"
+        "file": "./public/images/mercury.jpg"
     },
     {
         "id": "02",
-        "group": "group2",
+        "groupname": "group2",
         "title": "title of the post",
-        "content": "this is the content of the post. text, text, text...",
+        "content": "this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post. text, text, text...",
         "date": "20/08/2022",
-        "picture": "./public/images/venus.jpg",
-        "sound": "#link",
-        "video": "#link"
+        "file": "./public/images/venus.jpg"
     },
     {
         "id": "03",
-        "group": "group1",
+        "groupname": "group1",
         "title": "title of the post",
-        "content": "this is the content of the post. text, text, text...",
+        "content": "this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post. text, text, text...",
         "date": "20/08/2022",
-        "picture": "./public/images/earth.jpg",
-        "sound": "#link",
-        "video": "#link"
+        "file": "./public/images/earth.jpg"
     },
     {
         "id": "04",
-        "group": "group2",
+        "groupname": "group2",
         "title": "title of the post",
-        "content": "this is the content of the post. text, text, text...",
+        "content": "this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post.this is the content of the post. text, text, text...",
         "date": "20/08/2022",
-        "picture": "./public/images/mars.jpg",
-        "sound": "#link",
-        "video": "#link"
+        "file": "./public/images/mars.jpg"
     }
 ]
