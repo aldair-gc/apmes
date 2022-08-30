@@ -1,17 +1,6 @@
 <?php
 session_start();
-
-$DBservername = "localhost";
-$DBdatabase = "u186683530_neidebd";
-$DBusername = "u186683530_neideuser";
-$DBpassword = "G&vo~k7a";
-
-$conn = mysqli_connect($DBservername, $DBusername, $DBpassword, $DBdatabase);
-
-// make the connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include('/public/php/db.php')
 
 // check the submitted data
 if ( !isset($_POST['email'], $_POST['password']) ) {
@@ -34,7 +23,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['email'] = $_POST['email'];
             $_SESSION['id'] = $id;
-            header('Location: /public/php/home.php');
+            header('Location: home.php');
         } else {
             echo 'Incorrect email and/or password!';
         }
@@ -44,7 +33,6 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
 
     $stmt->close();
 }
-
 
 $conn->close();
 ?>

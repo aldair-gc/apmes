@@ -1,12 +1,7 @@
 <?php
-include('connect.php');
-
-
-// get registered groups from database
-$groups = mysqli_query($conn, "SELECT * FROM groups");
-
+include('/public/php/session.php');
+include('/public/php/fetch_groups.php');
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en-US">

@@ -1,6 +1,5 @@
 <?php
-include('connect.php');
-
+include('/public/php/session.php');
 ?>
 
 <!DOCTYPE html>
