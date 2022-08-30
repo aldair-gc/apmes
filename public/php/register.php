@@ -26,23 +26,38 @@ if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
     exit('Invalid email!');
 }
 
+// invalid characters validation
+// if (preg_match('/^[a-zA-Z0-9]+$/', $_POST[name]) == 0) {
+//     exit('Name with invalid characters!');
+// }
+
 // character length check
 if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
     exit('Password must be between 5 and 20 characters long!');
 }
 
 // check if the email is already on the database
+if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?')) {
+    $stmt->bind_param('s', $_POST['email']);
+    $stmt->execute();
+    $stmt->store_result();
 
-// save data directly
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    if ($stmt->num_rows > 0) {
+        echo 'This email is already registered.';
+    } else {
+        if ($stmt = $conn->prepare('INSERT INTO accounts (name, password, email) VALUES (?, ?, ?)') {
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $stmt->bind_param('sss', $_POST['name'], $password, $_POST['email']);
+            $stmt->execute();
+            header('Location: home.php');
+        } else {
+            echo 'Error proccessing register request!';
+        }
+    }
 
-$sql = "INSERT INTO accounts (name, password, email) VALUES ($_POST['name'], $password, $_POST['email'])";
-
-if ($conn->query($sql) === TRUE) {
-    echo "success";
+    $stmt->close();
 } else {
-    echo "error: " . $sql . "<br>" . $conn->error;
+    echo 'Could not prepare statement!';
 }
-
 $conn->close();
 ?>
