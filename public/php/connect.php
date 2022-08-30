@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 // $conn = mysqli_connect($DBservername, $DBusername, $DBpassword, $DBdatabase);
 
-// make the connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+// // make the connection
+// if (!$conn) {
+//     die("Connection failed: " . mysqli_connect_error());
+// }
