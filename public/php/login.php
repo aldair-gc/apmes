@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('/public/php/db.php')
+include('/public/php/db.php');
 
 // check the submitted data
 if ( !isset($_POST['email'], $_POST['password']) ) {
