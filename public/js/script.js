@@ -7,10 +7,6 @@
 // const url = new URL(window.location);
 const filters = document.querySelector("#filters");
 
-const all = document.querySelector("#all");
-const groupnames = [];
-const groups = document.querySelectorAll(".groupname");
-groups.forEach((value) => groupnames.push(value.id));
 
 // const group1 = document.querySelector("#group1");
 // const group2 = document.querySelector("#group2");
@@ -35,13 +31,17 @@ groups.forEach((value) => groupnames.push(value.id));
 filters.addEventListener("click", (e) => {
     const filterButton = e.target.innerText; // get button's text
     const allPosts = document.querySelectorAll(".post"); // select all these posts
-    const filters = [all, ...groupnames];
+    const all = document.querySelector("#all");
+
+    const groups = document.querySelectorAll(".groupname");
+    const groupObjects = [all];
+    groups.forEach((value) => groupObjects.push(value));
 
     // check if the target is a button
     if (!e.target.classList.contains("button")) return;
 
     // buttons colours
-    filters.forEach((x) => {
+    filterNames.forEach((x) => {
         if (x.innerText === filterButton) {
             x.style.background = "#027db6";
             x.style.color = "#fff";
