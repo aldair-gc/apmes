@@ -68,15 +68,13 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 2;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 20px;
+    gap: 20px;
 }
 
 .intro {
     display: flex;
     height: 600px;
-    margin: 20px;
     overflow: hidden;
     background-image: url("../images/zac-durant-_6HzPU9Hyfg-unsplash.jpg");
     background-position: 50% -300px;
@@ -97,7 +95,6 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    margin: 20px;
 }
 
 .square {
@@ -171,7 +168,6 @@ main {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    margin: 20px;
 }
 
 .filter-menu {
@@ -205,13 +201,6 @@ main {
     text-decoration: none;
     color: #000;
     cursor: pointer;
-}
-
-.post-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
 }
 
 .post {
@@ -258,6 +247,7 @@ main {
 /* POSTS - END */
 /* FOOTER - START */
 
+
 .footer-container {
     display: flex;
     gap: 10px;
@@ -272,6 +262,9 @@ main {
     text-align: center;
 }
 
+/* FOOTER - END */
+/* GENERAL - START */
+
 .hidden {
     display: none;
 }
@@ -285,11 +278,41 @@ main {
     cursor: pointer;
 }
 
+#groups-list .button {
+    background: #fff;
+    padding: 5px 15px;
+    border: 1px solid #027db6;
+    border-radius: 8px;
+    height: 30px;
+    cursor: default;
+}
+
+#radio-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.radio-option {
+    display: inline-block;
+    width: auto;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #027db6;
+    border-radius: 8px;
+    height: 30px;
+    cursor: default;
+}
+
 .form-box {
     margin: 100px auto;
     width: 500px;
     padding: 30px;
 }
+
+/* GENERAL - END */
+/* FORM-BOX - START */
 
 .form-box form {
     display: flex;
@@ -331,7 +354,8 @@ main {
     margin-bottom: 30px;
 }
 
-/* new post - start */
+/* FORM-BOX - END */
+/* NEW POST - START */
 
 .new-post .post {
     padding: 40px;
@@ -374,31 +398,4 @@ main {
     list-style: none;
 }
 
-#groups-list .button {
-    background: #fff;
-    padding: 5px 15px;
-    border: 1px solid #027db6;
-    border-radius: 8px;
-    height: 30px;
-    cursor: default;
-}
-
-#radio-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.radio-option {
-    display: inline-block;
-    width: auto;
-    background: #fff;
-    padding: 5px;
-    border: 1px solid #027db6;
-    border-radius: 8px;
-    height: 30px;
-    cursor: default;
-}
-
-/* new post - end */
+/* NEW POST - END */

@@ -10,13 +10,13 @@
 
 <body>
     <nav>
-        <div id="logo">
+        <a id="logo" href="/index.php">
             <img src="/public/images/logo-png-small.png" alt="Logo">
             Apostolic & Prophetic Ministries El Shaddai
-        </div>
+        </a>
         <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/feed.html">Feed</a></li>
-            <li><a href="/login.html">Login</a></li>
+            <li><a href="/index.php">Home</a></li>
+            <li><a href="/feed.php">Feed</a></li>
+            <li><a href="/login.php">Login</a></li>
         </ul>
     </nav>
