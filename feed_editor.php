@@ -1,7 +1,7 @@
 <?php
 require('php/session.php');
 require('php/db.php');
-require('php/fetch_posts_edit.php');
+require('php/fetch_posts.php');
 require('php/fetch_groups.php');
 require('components/header.php');
 ?>
