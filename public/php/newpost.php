@@ -24,7 +24,7 @@ if (!isset($_POST['file']) || empty($_POST['file'])) {
 }
 
 // save the new post in the database
-if ($stmt = $conn->prepare('INSERT INTO posts (groupname, title, text, file) VALUES (?, ?, ?, ?)')) {
+if ($stmt = $conn->prepare('INSERT INTO posts (groupname, title, content, file) VALUES (?, ?, ?, ?)')) {
     $stmt->bind_param('ssss', $_POST['groupname'], $_POST['title'], $_POST['content'], $uploadfile);
     $stmt->execute();
     header('Location: /home.php');
