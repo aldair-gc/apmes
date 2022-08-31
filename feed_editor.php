@@ -45,9 +45,10 @@ require('public/php/fetch_groups.php');
 
             <div class="post-container">
                 <?php while ($row = mysqli_fetch_array($posts)) { ?>
+                    <?php $filechecked = ($row['file'] === '') ? '/public/images/bible-2110439_640.jpg' : $row['file'] ?>
 
                     <div class="post <?php echo $row['groupname']; ?>">
-                        <img class="post-media" src="<?php echo $row['file']; ?>"></img>
+                        <img class="post-media" src="<?php echo $filechecked; ?>"></img>
                         <div class="post-texts">
                             <div class="posts-header">
                                 <div class="posts-title"><?php echo $row['title']; ?></div>

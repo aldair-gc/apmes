@@ -10,7 +10,7 @@ const filters = document.querySelector("#filters");
 const all = document.querySelector("#all");
 const groupnames = [];
 const groups = document.querySelectorAll(".groupname");
-groups.map((x) => groupnames.push(x.innerText));
+groups.forEach((value) => groupnames.push(value.id));
 
 // const group1 = document.querySelector("#group1");
 // const group2 = document.querySelector("#group2");
