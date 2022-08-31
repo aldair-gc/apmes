@@ -1,5 +1,6 @@
 <?php
 require('public/php/session.php');
+require('public/php/db.php');
 require('public/php/fetch_groups.php');
 ?>
 

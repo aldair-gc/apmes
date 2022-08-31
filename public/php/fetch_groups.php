@@ -1,3 +1,2 @@
 <?php
-$groups = mysqli_query($conn, "SELECT * FROM groups");
-echo $groups;
+$groups = mysqli_query($conn, "SELECT groupname FROM groups");
