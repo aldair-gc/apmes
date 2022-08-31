@@ -386,14 +386,14 @@ main {
 
 #radio-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-#radio-list input {
+.radio-option input {
     display: inline;
-    width: 15px;
+    width: 20px;
 }
 
 /* new post - end */
