@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('/public/php/db.php');
+require('db.php');
 
 // check the submitted data
 if ( !isset($_POST['email'], $_POST['password']) ) {
@@ -23,7 +23,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['email'] = $_POST['email'];
             $_SESSION['id'] = $id;
-            header('Location: home.php');
+            header('Location: /home.php');
         } else {
             echo 'Incorrect email and/or password!';
         }
