@@ -3,12 +3,12 @@ require('session.php');
 require('db.php');
 
 // check if the fields exist
-if (!isset($_POST['groupname'], $_POST['title'], $_POST['text'])) {
+if (!isset($_POST['groupname'], $_POST['title'], $_POST['content'])) {
     exit('Data missing.');
 }
 
 // check if the fields are not empty
-if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['text'])) {
+if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['content'])) {
     exit('The fields must be fulfilled.');
 }
 
@@ -24,7 +24,7 @@ if (!isset($_POST['file']) || empty($_POST['file'])) {
 
 // save the new post in the database
 if ($stmt = $conn->prepare('INSERT INTO posts (groupname, title, text, file) VALUES (?, ?, ?, ?)')) {
-    $stmt->bind_param('ssss', $_POST['groupname'], $_POST['title'], $_POST['text'], $uploadfile);
+    $stmt->bind_param('ssss', $_POST['groupname'], $_POST['title'], $_POST['content'], $uploadfile);
     $stmt->execute();
     header('Location: /home.php');
 } else {
