@@ -1,6 +1,6 @@
 <?php
-require('/public/php/session.php');
-require('/public/php/fetch_groups.php');
+require('public/php/session.php');
+require('public/php/fetch_groups.php');
 ?>
 
 <!DOCTYPE html>
