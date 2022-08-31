@@ -41,7 +41,7 @@ filters.addEventListener("click", (e) => {
     if (!e.target.classList.contains("button")) return;
 
     // buttons colours
-    filterNames.forEach((x) => {
+    groupObjects.forEach((x) => {
         if (x.innerText === filterButton) {
             x.style.background = "#027db6";
             x.style.color = "#fff";
