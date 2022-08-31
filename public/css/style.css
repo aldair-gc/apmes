@@ -374,7 +374,8 @@ main {
     list-style: none;
 }
 
-#groups-list .button {
+#groups-list .button,
+#radio-list input {
     background: #fff;
     padding: 5px 15px;
     border-radius: 8px;
