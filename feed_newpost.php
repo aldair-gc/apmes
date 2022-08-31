@@ -33,7 +33,7 @@ require('public/php/fetch_groups.php');
                     <li id="back-to-editor-button" class="button"><a href="/home.php">back</a></li>
                 </ul>
                 <ul>
-                    <li id="new-group-button" class="button"><a href="/feed-newgroup.php">new group</a></li>
+                    <li id="new-group-button" class="button"><a href="/feed_newgroup.php">new group</a></li>
                 </ul>
             </div>
 

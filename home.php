@@ -34,8 +34,8 @@ require('public/php/session.php');
                     <li id="group2" class="button">group2</li>
                 </ul>
                 <ul>
-                    <li id="new-post-button" class="button"><a href="/feed-newpost.php">new post</a></li>
-                    <li id="new-group-button" class="button"><a href="/feed-newgroup.php">new group</a></li>
+                    <li id="new-post-button" class="button"><a href="/feed_newpost.php">new post</a></li>
+                    <li id="new-group-button" class="button"><a href="/feed_newgroup.php">new group</a></li>
                 </ul>
             </div>
 

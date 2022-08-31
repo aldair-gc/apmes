@@ -1,3 +1,8 @@
+<?php
+require('public/php/session.php');
+require('public/php/fetch_groups.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -25,34 +30,20 @@
         <div class="posts-container box">
             <div class="filter-menu">
                 <ul>
-                    <li id="back-to-editor-button" class="button"><a href="/feed-editor.html">back</a></li>
+                    <li id="back-to-editor-button" class="button"><a href="/feed_editor.html">back</a></li>
                 </ul>
                 <ul>
-                    <li id="new-group-button" class="button"><a href="/feed-newgroup.html">new group</a></li>
+                    <li id="new-group-button" class="button"><a href="/feed_newpost.php">new post</a></li>
                 </ul>
             </div>
 
             <div class="new-post">
                 <div class="post">
-                    <h2>Create new post</h2>
+                    <h2>Create new group</h2>
 
-                    <form action="/public/php/newpost.php" method="post">
-                        <label for="groupname">Group:</label>
-                        <input list="groups" name="groupname" id="groupname">
-                        <datalist id="groups">
-                            <option value="group1">
-                            <option value="group2">
-                            <option value="group3">
-                        </datalist>
-
-                        <label for="title">Title:</label>
-                        <input type="text" name="title" id="title">
-
-                        <label for="content">Text:</label>
-                        <textarea name="content" id="content" cols="30" rows="10"></textarea>
-
-                        <label for="file">File:</label>
-                        <input type="file" name="file" id="file">
+                    <form action="/public/php/newgroup.php" method="post">
+                        <label for="groupname">Group name:</label>
+                        <input type="text" name="groupname" id="groupname">
 
                         <input type="button" value="Save">
                     </form>
