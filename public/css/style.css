@@ -337,7 +337,7 @@ main {
     padding: 40px;
 }
 
-.new-post form {
+.new-post .post form {
     display: flex;
     flex-direction: column;
     width: 100%;
