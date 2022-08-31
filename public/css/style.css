@@ -375,9 +375,10 @@ main {
 }
 
 #groups-list .button,
-#radio-list input {
+.radio-option {
     background: #fff;
     padding: 5px 15px;
+    border: 1px solid #027db6;
     border-radius: 8px;
     height: 30px;
     cursor: default;
@@ -387,6 +388,7 @@ main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 #radio-list input {

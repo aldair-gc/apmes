@@ -47,8 +47,10 @@ require('public/php/fetch_groups.php');
                         <div class="radio-list">
     
                             <?php while ($row = mysqli_fetch_array($groups)) { ?>
-                                <label for="<?php echo $row['groupname']; ?>"><?php echo $row['groupname']; ?></label>
-                                <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>">
+                                <div class="radio-option">
+                                    <label for="<?php echo $row['groupname']; ?>"><?php echo $row['groupname']; ?></label>
+                                    <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>">
+                                </div>
                             <?php } ?>
 
                         </div>
