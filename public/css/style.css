@@ -374,8 +374,7 @@ main {
     list-style: none;
 }
 
-#groups-list .button,
-.radio-option {
+#groups-list .button {
     background: #fff;
     padding: 5px 15px;
     border: 1px solid #027db6;
@@ -389,6 +388,17 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.radio-option {
+    display: inline-block;
+    width: auto;
+    background: #fff;
+    padding: 5px 15px;
+    border: 1px solid #027db6;
+    border-radius: 8px;
+    height: 30px;
+    cursor: default;
 }
 
 .radio-option input {
