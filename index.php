@@ -36,7 +36,8 @@ require('components/header.php');
         </div>
     </div>
 
-    <div class="post-container">
+    <div class="posts-container box">
+        <div class="post-container">
             <?php while ($row = mysqli_fetch_array($posts)) { ?>
                 <?php $filechecked = ($row['file'] === '') ? '/public/images/bible-2110439_640.jpg' : $row['file'] ?>
 
@@ -52,7 +53,8 @@ require('components/header.php');
                 </div>
 
             <?php } ?>
-        </div>
+            </div>
+    </div>
 </main>
 
 <?php require('components/footer.php'); ?>
