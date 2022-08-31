@@ -43,9 +43,7 @@ require('public/php/fetch_groups.php');
 
                     Groups registered:
                     <ul>
-
-                    <?php $grouplist = mysqli_query($conn, "SELECT * FROM groups");
-                    while ($row = mysqli_fetch_array($grouplist)) { ?>
+                    <?php while ($row = mysqli_fetch_array($groups)) { ?>
                         <li><?php echo $row['groupname']; ?></li>
                     <?php } ?>
                     </ul>
