@@ -359,7 +359,7 @@ main {
     flex-direction: column;
 }
 
-.new-post input[type=button] {
+.new-post input[type=submit] {
     margin: 40px auto 0 auto;
     background: #027db6;
     color: #fff;
