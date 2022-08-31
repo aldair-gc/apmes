@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+require('db.php');
 
 // check if the fields exist
 if (!isset($_POST['name'], $_POST['password'], $_POST['email'])) {
@@ -39,7 +39,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $stmt->bind_param('sss', $_POST['name'], $password, $_POST['email']);
             $stmt->execute();
-            header('Location: /public/php/home.php');
+            header('Location: /home.php');
         } else {
             echo 'Error proccessing register request!';
         }

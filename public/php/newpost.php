@@ -1,6 +1,6 @@
 <?php
-include('session.php');
-include('db.php');
+require('session.php');
+require('db.php');
 
 // check if the fields exist
 if (!isset($_POST['groupname'], $_POST['title'], $_POST['text'])) {
@@ -26,7 +26,7 @@ if (!isset($_POST['file']) || empty($_POST['file'])) {
 if ($stmt = $conn->prepare('INSERT INTO posts (groupname, title, text, file) VALUES (?, ?, ?, ?)')) {
     $stmt->bind_param('ssss', $_POST['groupname'], $_POST['title'], $_POST['text'], $uploadfile);
     $stmt->execute();
-    header('Location: ../../home.php');
+    header('Location: /home.php');
 } else {
     echo 'Error proccessing register request!';
 }
