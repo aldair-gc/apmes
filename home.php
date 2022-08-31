@@ -1,5 +1,5 @@
 <?php
-require('public/php/session.php');
+require('php/session.php');
 require('components/header.php');
 ?>
 
