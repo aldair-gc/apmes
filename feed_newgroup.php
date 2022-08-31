@@ -43,14 +43,14 @@ require('public/php/fetch_groups.php');
                     <h2>Create new group</h2>
 
                     Groups registered:
-                    <ul>
+                    <ul id="groups-list">
                     <?php while ($row = mysqli_fetch_array($groups)) { ?>
-                        <li><?php echo $row['groupname']; ?></li>
+                        <li class="button"><?php echo $row['groupname']; ?></li>
                     <?php } ?>
                     </ul>
 
                     <form action="/public/php/newgroup.php" method="post">
-                        <label for="groupname">Group name:</label>
+                        <label for="groupname">New group:</label>
                         <input type="text" name="groupname" id="groupname">
 
                         <input type="submit" value="Save">

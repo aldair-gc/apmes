@@ -367,4 +367,18 @@ main {
     width: 50%;
 }
 
+.new-post #groups-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#groups-list .button {
+    background: #fff;
+    padding: 5px 15px;
+    border-radius: 8px;
+    height: 30px;
+}
+
 /* new post - end */
