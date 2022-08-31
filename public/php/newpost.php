@@ -18,14 +18,16 @@ if (!isset($_FILES['file']) || empty($_FILES['file'])) {
 } else {
     $uploaddir = '../uploads/';
     $extension = end(explode('.', $_FILES['file']['name']));
-    $uploadfile = $uploaddir . time() . '_' . rand(1000, 9999) . '.' . $extension;
+    $newfilename = time() . '_' . rand(1000, 9999) . '.' . $extension;
+    $uploadfile = $uploaddir . $newfilename;
+    $loadpath = '/public/uploads/' . $newfilename;
     
     move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
 }
 
 // save the new post in the database
 if ($stmt = $conn->prepare('INSERT INTO posts (groupname, title, content, file) VALUES (?, ?, ?, ?)')) {
-    $stmt->bind_param('ssss', $_POST['groupname'], $_POST['title'], $_POST['content'], $uploadfile);
+    $stmt->bind_param('ssss', $_POST['groupname'], $_POST['title'], $_POST['content'], $loadpath);
     $stmt->execute();
     header('Location: /home.php');
 } else {
