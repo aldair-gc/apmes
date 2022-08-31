@@ -13,7 +13,7 @@ if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['conten
 }
 
 // handle submitted file
-if (!isset($_POST['file']) || empty($_POST['file'])) {
+if (!isset($_FILES['file']) || empty($_FILES['file'])) {
     $uploadfile = '';
 } else {
     $uploaddir = '../uploads/';
