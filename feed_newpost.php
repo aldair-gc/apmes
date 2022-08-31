@@ -44,11 +44,14 @@ require('public/php/fetch_groups.php');
 
                     <form action="/public/php/newpost.php" method="post">
                         <label for="groupname">Group:</label>
+                        <div class="radio-list">
+    
+                            <?php while ($row = mysqli_fetch_array($groups)) { ?>
+                                <label for="<?php echo $row['groupname']; ?>"><?php echo $row['groupname']; ?></label>
+                                <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>">
+                            <?php } ?>
 
-                        <?php while ($row = mysqli_fetch_array($groups)) { ?>
-                            <label for="<?php echo $row['groupname']; ?>"><?php echo $row['groupname']; ?></label>
-                            <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>">
-                        <?php } ?>
+                        </div>
 
                         <label for="title">Title:</label>
                         <input type="text" name="title" id="title">
@@ -59,7 +62,7 @@ require('public/php/fetch_groups.php');
                         <label for="file">File:</label>
                         <input type="file" name="file" id="file">
 
-                        <input type="button" value="Save">
+                        <input type="submit" value="Save">
                     </form>
                 </div>
             </div>

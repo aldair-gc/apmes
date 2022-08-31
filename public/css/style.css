@@ -382,4 +382,15 @@ main {
     cursor: default;
 }
 
+#radio-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#radio-list input {
+    display: inline;
+    width: 15px;
+}
+
 /* new post - end */
