@@ -20,7 +20,7 @@ if (!isset($_FILES['file']) || empty($_FILES['file'])) {
     $extension = end(explode('.', $_FILES['file']['name']));
     $newfilename = time() . '_' . rand(1000, 9999) . '.' . $extension;
     $uploadfile = $uploaddir . $newfilename;
-    $loadpath = '/public/uploads/' . $newfilename;
+    $loadpath = '/uploads' . '/' . $newfilename;
     
     move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
 }

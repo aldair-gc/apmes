@@ -9,7 +9,7 @@ require('components/header.php');
     <div class="posts-container box">
         <div class="filter-menu">
             <ul>
-                <li id="back-to-editor-button" class="button"><a href="/feed_editor.html">back</a></li>
+                <li id="back-to-editor-button" class="button"><a href="/feed_editor.php">back</a></li>
             </ul>
             <ul>
                 <li id="new-group-button" class="button"><a href="/feed_newpost.php">new post</a></li>
