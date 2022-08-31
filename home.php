@@ -1,5 +1,5 @@
 <?php
-include('/public/php/session.php');
+require('/public/php/session.php');
 ?>
 
 <!DOCTYPE html>
