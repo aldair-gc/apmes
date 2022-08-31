@@ -42,7 +42,7 @@ require('public/php/fetch_groups.php');
                 <div class="post">
                     <h2>Create new post</h2>
 
-                    <form action="/public/php/newpost.php" method="post">
+                    <form enctype="multipart/form-data" action="/public/php/newpost.php" method="POST">
                         <label for="groupname">Group:</label>
                         <div class="radio-list">
     
@@ -61,7 +61,8 @@ require('public/php/fetch_groups.php');
                         <label for="content">Text:</label>
                         <textarea name="content" id="content" cols="30" rows="10"></textarea>
 
-                        <label for="file">File:</label>
+                        <label for="file">Picture, video or audio:</label>
+                        <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
                         <input type="file" name="file" id="file">
 
                         <input type="submit" value="Save">
