@@ -9,4 +9,4 @@ require('components/header.php');
     </ul>
 </main>
 
-<?php require('components/footer.php');
+<?php require('components/footer.php'); ?>
