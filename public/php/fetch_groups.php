@@ -1,3 +1,3 @@
 <?php
 $groups = [];
-$groups = mysqli_query($conn, "SELECT * FROM groups")
+$groups = mysqli_query($conn, "SELECT * FROM groups");
