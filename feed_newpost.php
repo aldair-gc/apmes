@@ -1,5 +1,6 @@
 <?php
 require('public/php/session.php');
+require('public/php/db.php');
 require('public/php/fetch_groups.php');
 ?>
 
@@ -43,7 +44,10 @@ require('public/php/fetch_groups.php');
 
                     <form action="/public/php/newpost.php" method="post">
                         <label for="groupname">Group:</label>
-                        <input type="text" name="groupname" id="groupname">
+
+                        <?php while ($row = mysqli_fetch_array($groups)) { ?>
+                            <input type="radio" name="groupname" value="<?php echo $row['groupname']; ?>">
+                        <?php } ?>
 
                         <label for="title">Title:</label>
                         <input type="text" name="title" id="title">

@@ -25,7 +25,7 @@ if ($stmt = $conn->prepare('SELECT id FROM groups WHERE groupname = ?')) {
         if ($stmt = $conn->prepare('INSERT INTO groups (groupname) VALUES (?)')) {
             $stmt->bind_param('s', $_POST['groupname']);
             $stmt->execute();
-            header('Location: /home.php');
+            header('Location: /feed_newgroup.php');
         } else {
             echo 'Error proccessing register request!';
         }
