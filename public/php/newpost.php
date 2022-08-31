@@ -17,8 +17,8 @@ if (!isset($_FILES['file']) || empty($_FILES['file'])) {
     $uploadfile = '';
 } else {
     $uploaddir = '../uploads/';
-    $path_parts = pathinfo($_FILES['file']['name']);
-    $uploadfile = $uploaddir . time() . '_' . rand(1000, 9999) . '.' . $path_parts['extension'];
+    $extension = end(explode('.', $_FILES['file']['name']));
+    $uploadfile = $uploaddir . time() . '_' . rand(1000, 9999) . '.' . $extension;
     
     move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
 }
