@@ -45,7 +45,7 @@ require('public/php/fetch_groups.php');
                         <label for="groupname">Group name:</label>
                         <input type="text" name="groupname" id="groupname">
 
-                        <input type="button" value="Save">
+                        <input id="button" type="submit" value="Save">
                     </form>
                 </div>
             </div>
