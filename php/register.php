@@ -3,17 +3,17 @@ require('db.php');
 
 // check if the fields exist
 if (!isset($_POST['name'], $_POST['password'], $_POST['email'])) {
-    exit('Data missing.');
+    header('Location: /register.php?msg=5');
 }
 
 // check if the fields are not empty
 if (empty($_POST['name']) || empty($_POST['password']) || empty($_POST['email'])) {
-    exit('All fields must be fulfilled.');
+    header('Location: /register.php?msg=6');
 }
 
 // validate email
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    exit('Invalid email!');
+    header('Location: /register.php?msg=7');
 }
 
 // invalid characters validation
@@ -23,7 +23,8 @@ if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 
 // character length check
 if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
-    exit('Password must be between 5 and 20 characters long!');
+    header('Location: /register.php?msg=8');
+
 }
 
 // check if the email is already on the database
@@ -33,7 +34,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        echo 'This email is already registered.';
+        header('Location: /register.php?msg=9');
     } else {
         if ($stmt = $conn->prepare('INSERT INTO accounts (name, password, email) VALUES (?, ?, ?)')) {
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -41,13 +42,13 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
             $stmt->execute();
             header('Location: /home.php');
         } else {
-            echo 'Error proccessing register request!';
+            header('Location: /register.php?msg=3');
         }
     }
 
     $stmt->close();
 } else {
-    echo 'Could not prepare statement!';
+    header('Location: /register.php?msg=4');
 }
 $conn->close();
 ?>

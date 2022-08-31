@@ -1,22 +1,42 @@
 <?php
 require('php/db.php');
-require('php/fetch_groups.php');
-require('php/fetch_posts.php')
+require('php/fetch_posts.php');
 require('components/header.php');
 ?>
 
 <main>
-    <div class="posts-container box">
-        <div class="filter-menu">
-            <ul id="filters">
-                <li id="all" class="button active">all</li>
-                <?php while ($row = mysqli_fetch_array($groups)) { ?>
-                    <li id="<?php echo $row['groupname']; ?>" class="groupname button"><?php echo $row['groupname']; ?></li>
-                <?php } ?>
-            </ul>
-        </div>
+    <div class="intro box">
+        <img src="./public/images/logo-bg-png.png" alt="Logo">
+    </div>
 
-        <div class="post-container">
+    <div class="square-container box">
+        <div class="square" id="church">
+            <h2>The Church</h2>
+            <div class="bgblur"></div>
+        </div>
+        <div class="square" id="prayers">
+            <h2>Prayers</h2>
+            <div class="bgblur"></div>
+        </div>
+        <div class="square" id="missions">
+            <h2>Missions</h2>
+            <div class="bgblur"></div>
+        </div>
+        <div class="square" id="agenda">
+            <h2>Agenda</h2>
+            <div class="bgblur"></div>
+        </div>
+        <div class="square" id="pictures">
+            <h2>Pictures</h2>
+            <div class="bgblur"></div>
+        </div>
+        <div class="square" id="videos">
+            <h2>Videos</h2>
+            <div class="bgblur"></div>
+        </div>
+    </div>
+
+    <div class="post-container">
             <?php while ($row = mysqli_fetch_array($posts)) { ?>
                 <?php $filechecked = ($row['file'] === '') ? '/public/images/bible-2110439_640.jpg' : $row['file'] ?>
 
@@ -33,7 +53,6 @@ require('components/header.php');
 
             <?php } ?>
         </div>
-    </div>
 </main>
 
 <?php require('components/footer.php'); ?>

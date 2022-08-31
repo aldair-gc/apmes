@@ -29,9 +29,9 @@ if (!isset($_FILES['file']) || empty($_FILES['file'])) {
 if ($stmt = $conn->prepare('INSERT INTO posts (groupname, title, content, file) VALUES (?, ?, ?, ?)')) {
     $stmt->bind_param('ssss', $_POST['groupname'], $_POST['title'], $_POST['content'], $loadpath);
     $stmt->execute();
-    header('Location: /home.php');
+    header('Location: /feed_editor.php');
 } else {
-    echo 'Error proccessing register request!';
+    header('Location: /feed_editor.php?msg=3');
 }
 
 $conn->close();

@@ -25,10 +25,10 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
             $_SESSION['id'] = $id;
             header('Location: /home.php');
         } else {
-            echo 'Incorrect email and/or password!';
+            header('Location: /login.php?msg=1');
         }
     } else {
-        echo 'Email not registered!';
+        header('Location: /login.php?msg=2');
     }
 
     $stmt->close();
@@ -36,3 +36,4 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
 
 $conn->close();
 ?>
+\

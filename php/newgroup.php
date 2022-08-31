@@ -27,13 +27,13 @@ if ($stmt = $conn->prepare('SELECT id FROM groups WHERE groupname = ?')) {
             $stmt->execute();
             header('Location: /feed_newgroup.php');
         } else {
-            echo 'Error proccessing register request!';
+            header('Location: /feed_editor.php?msg=3');
         }
     }
 
     $stmt->close();
 } else {
-    echo 'Could not prepare statement!';
+    header('Location: /feed_editor.php?msg=4');
 }
 
 $conn->close();
