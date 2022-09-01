@@ -12,7 +12,7 @@ $post = mysqli_query($conn, "SELECT * FROM posts WHERE id=$urlid");
     <div class="posts-container box">
         <div class="filter-menu">
             <ul>
-                <li id="back-to-editor-button" class="button"><a href="/home.php">back</a></li>
+                <li id="back-to-editor-button" class="button"><a href="/post_editor.php">back</a></li>
             </ul>
             <ul>
                 <li id="new-group-button" class="button"><a href="/feed_newgroup.php">new group</a></li>
@@ -23,7 +23,7 @@ $post = mysqli_query($conn, "SELECT * FROM posts WHERE id=$urlid");
             <div class="post">
                 <h2>Edit post</h2>
 
-                <form enctype="multipart/form-data" action="/php/editpost.php" method="PUT">
+                <form enctype="multipart/form-data" action="/php/editpost.php" method="POST">
                     <label for="groupname">Group:</label>
                     <div class="radio-list">
 
