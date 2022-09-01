@@ -4,7 +4,7 @@ require_once('php/db.php');
 require('php/fetch_groups.php');
 require('components/header.php');
 $urlid = htmlspecialchars($_GET["id"]);
-$post = mysqli_query($conn, "SELECT * FROM posts WHERE id=$urlid");
+$post = mysqli_query($conn, "SELECT groupname, title, content FROM posts WHERE id=$urlid");
 ?>
 
 <main>
@@ -34,7 +34,7 @@ $post = mysqli_query($conn, "SELECT * FROM posts WHERE id=$urlid");
                             </div>
                         <?php } ?>
 
-                    </div>$post
+                    </div>
 
                     <label for="title">Title:</label>
                     <input type="text" name="title" id="title" value="<?php echo $post->title ?>">
