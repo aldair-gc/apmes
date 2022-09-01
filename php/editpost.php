@@ -13,7 +13,16 @@ if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['conten
 }
 
 // handle submitted file
-if (isset($_FILES['file']) && !empty($_FILES['file'])) {
+if (!isset($_FILES['file']) || empty($_FILES['file'])) {
+    // save the new post in the database
+    if ($stmt = $conn->prepare('UPDATE posts SET groupname=?, title=?, content=? WHERE id=?')) {
+        $stmt->bind_param('sssi', $_POST['groupname'], $_POST['title'], $_POST['content'], $_POST['id']);
+        $stmt->execute();
+        header('Location: /feed_editor.php');
+    } else {
+        header('Location: /feed_editor.php?msg=3');
+    }
+} else {
     $uploaddir = '../uploads/';
     $origfilename = $_FILES['file']['name'];
     $extension = end(explode('.', $origfilename));
@@ -25,16 +34,7 @@ if (isset($_FILES['file']) && !empty($_FILES['file'])) {
 
     // save the new post in the database
     if ($stmt = $conn->prepare('UPDATE posts SET groupname=?, title=?, content=? file=? WHERE id=?')) {
-        $stmt->bind_param('sssss', $_POST['groupname'], $_POST['title'], $_POST['content'], $loadpath, $_POST['id']);
-        $stmt->execute();
-        header('Location: /feed_editor.php');
-    } else {
-        header('Location: /feed_editor.php?msg=3');
-    }
-} else {
-    // save the new post in the database
-    if ($stmt = $conn->prepare('UPDATE posts SET groupname=?, title=?, content=? WHERE id=?')) {
-        $stmt->bind_param('ssss', $_POST['groupname'], $_POST['title'], $_POST['content'], $_POST['id']);
+        $stmt->bind_param('ssssi', $_POST['groupname'], $_POST['title'], $_POST['content'], $loadpath, $_POST['id']);
         $stmt->execute();
         header('Location: /feed_editor.php');
     } else {
