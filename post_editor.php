@@ -5,10 +5,11 @@ require('php/fetch_groups.php');
 require('components/header.php');
 $urlid = htmlspecialchars($_GET["id"]);
 $post = mysqli_query($conn, "SELECT groupname, title, content FROM posts WHERE id=$urlid");
-printf($urlid, $post);
 ?>
 
 <main>
+    id = <?php echo $urlid ?>
+    query = <?php echo $post ?>
     <div class="posts-container box">
         <div class="filter-menu">
             <ul>
