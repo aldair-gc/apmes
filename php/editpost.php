@@ -30,7 +30,7 @@ if (isset($_FILES['file']) && !empty($_FILES['file'])) {
         $stmt->execute();
         header('Location: /feed_editor.php?msg=10');
     } else {
-        header('Location: /feed_editor.php?msg=3');
+        header('Location: /feed_editor.php?msg=3A');
     }
 } else {
     // save the new post in the database
@@ -39,7 +39,7 @@ if (isset($_FILES['file']) && !empty($_FILES['file'])) {
         $stmt->execute();
         header('Location: /feed_editor.php?msg=10');
     } else {
-        header('Location: /feed_editor.php?msg=3');
+        header('Location: /feed_editor.php?msg=3B');
     }
 }
 

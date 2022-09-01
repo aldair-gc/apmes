@@ -48,7 +48,6 @@ $thispost = mysqli_fetch_array($post);
                     <input type="file" name="file" id="file">
 
                     <input type="hidden" name="id" value="<?php echo $urlid ?>">
-                    <input type="hidden" name="groupname" value="<?php echo $thispost['groupname'] ?>">
 
                     <input type="submit" value="Update">
                 </form>
