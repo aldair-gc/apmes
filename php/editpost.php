@@ -25,7 +25,7 @@ if (isset($_FILES['file']['name']) && !empty($_FILES['file']['name'])) {
     move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
 
     // save the new post in the database
-    if ($stmt = $conn->prepare('UPDATE posts SET groupname=?, title=?, content=? file=? WHERE id=?')) {
+    if ($stmt = $conn->prepare('UPDATE posts SET groupname=?, title=?, content=?, file=? WHERE id=?')) {
         $stmt->bind_param('ssssi', $_POST['groupname'], $_POST['title'], $_POST['content'], $loadpath, $_POST['id']);
         $stmt->execute();
         header('Location: /feed_editor.php?msg=10');
