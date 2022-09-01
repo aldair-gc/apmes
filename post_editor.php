@@ -2,7 +2,6 @@
 require_once('php/session.php');
 require_once('php/db.php');
 require('php/fetch_groups.php');
-require('php/editpost.php');
 require('components/header');
 $urlid = htmlspecialchars($_GET["id"]);
 $post = mysqli_query($conn, "SELECT * FROM posts WHERE id=$urlid");
