@@ -17,7 +17,8 @@ if (!isset($_FILES['file']) || empty($_FILES['file'])) {
     $uploadfile = '';
 } else {
     $uploaddir = '../uploads/';
-    $extension = end(explode('.', $_FILES['file']['name']));
+    $origfilename = $_FILES['file']['name'];
+    $extension = end(explode('.', $origfilename));
     $newfilename = time() . '_' . rand(1000, 9999) . '.' . $extension;
     $uploadfile = $uploaddir . $newfilename;
     $loadpath = '/uploads' . '/' . $newfilename;

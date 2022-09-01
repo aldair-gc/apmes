@@ -35,8 +35,8 @@ require('components/header.php');
                         <div class="posts-content"><?php echo $row['content']; ?></div>
                     </div>
                     <div class="post-control">
-                        <button class="button" id="post-edit">edit</button>
-                        <button class="button" id="post-delete">delete</button>
+                        <button class="button" id="post-edit" onclick="<?php header('/post_editor?id=' . echo $row['id']); ?>">edit</button>
+                        <button class="button" id="post-delete" onclick="<?php header('/post_delete?id=' . echo $row['id']); ?>">delete</button>
                     </div>
                 </div>
 
