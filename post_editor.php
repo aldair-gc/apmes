@@ -8,8 +8,6 @@ $post = mysqli_query($conn, "SELECT groupname, title, content FROM posts WHERE i
 ?>
 
 <main>
-    id = <?php echo $urlid ?>
-    query = <?php echo $post ?>
     <div class="posts-container box">
         <div class="filter-menu">
             <ul>
@@ -31,7 +29,7 @@ $post = mysqli_query($conn, "SELECT groupname, title, content FROM posts WHERE i
                         <?php while ($row = mysqli_fetch_array($groups)) { ?>
                             <div class="radio-option">
                                 <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>"
-                                    <?php echo (($row['groupname'] == $post->groupname) ? ' checked' : '') ?>>
+                                    <?php echo (($row['groupname'] == $mysqli_result->groupname) ? ' checked' : '') ?>>
                                 <label for="<?php echo $row['groupname']; ?>"><?php echo $row['groupname']; ?></label>
                             </div>
                         <?php } ?>
@@ -39,17 +37,17 @@ $post = mysqli_query($conn, "SELECT groupname, title, content FROM posts WHERE i
                     </div>
 
                     <label for="title">Title:</label>
-                    <input type="text" name="title" id="title" value="<?php echo $post->title ?>">
+                    <input type="text" name="title" id="title" value="<?php echo $mysqli_result->title ?>">
 
                     <label for="content">Text:</label>
-                    <textarea name="content" id="content" cols="30" rows="10" value="<?php echo $post->content ?>"></textarea>
+                    <textarea name="content" id="content" cols="30" rows="10" value="<?php echo $mysqli_result->content ?>"></textarea>
 
                     <label for="file">Picture, video or audio:</label>
                     <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
                     <input type="file" name="file" id="file">
 
                     <input type="hidden" name="id" value="<?php echo $urlid ?>">
-                    <input type="hidden" name="groupname" value="<?php echo $post->groupname ?>">
+                    <input type="hidden" name="groupname" value="<?php echo $mysqli_result->groupname ?>">
 
                     <input type="submit" value="Update">
                 </form>
