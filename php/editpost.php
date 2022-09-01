@@ -1,6 +1,6 @@
 <?php
-require_once('session.php');
-require_once('db.php');
+require('session.php');
+require('db.php');
 
 // check if the fields exist
 if (!isset($_POST['groupname'], $_POST['title'], $_POST['content'], $_POST['id'])) {
@@ -13,7 +13,7 @@ if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['conten
 }
 
 // handle submitted file
-if (!isset($_FILES['file']) || empty($_FILES['file'])) {
+if (empty($_FILES['file'])) {
     // save the new post in the database
     if ($stmt = $conn->prepare('UPDATE posts SET groupname=?, title=?, content=? WHERE id=?')) {
         $stmt->bind_param('ssss', $_POST['groupname'], $_POST['title'], $_POST['content'], $_POST['id']);
