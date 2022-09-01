@@ -35,16 +35,16 @@ require('components/header.php');
                         <div class="posts-content"><?php echo $row['content']; ?></div>
                     </div>
                     <div class="post-control">
-                        <button
+                        <a
                             class="button" id="post-edit"
-                            onclick="<?php $edit = '/post_editor?id=' . $row['id']; header($edit); ?>">
+                            href="<?php echo '/post_editor?id=' . $row['id']; ?>">
                             edit
-                        </button>
-                        <button
+                        </a>
+                        <a
                             class="button" id="post-delete"
-                            onclick="<?php $delete = '/post_delete?id=' . $row['id']; header($delete); ?>">
+                            href="<?php echo '/post_delete?id=' . $row['id']; ?>">
                             delete
-                        </button>
+                        </a>
                     </div>
                 </div>
 
