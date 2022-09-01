@@ -37,12 +37,12 @@ require('components/header.php');
                     <div class="post-control">
                         <a
                             class="button" id="post-edit"
-                            href="<?php echo '/post_editor?id=' . $row['id']; ?>">
+                            href="<?php echo '/post_editor.php?id=' . $row['id']; ?>">
                             edit
                         </a>
                         <a
                             class="button" id="post-delete"
-                            href="<?php echo '/post_delete?id=' . $row['id']; ?>">
+                            href="<?php echo '/post_delete.php?id=' . $row['id']; ?>">
                             delete
                         </a>
                     </div>
