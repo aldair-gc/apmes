@@ -13,7 +13,7 @@ if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['conten
 }
 
 // handle submitted file
-if (isset($_FILES['file']) && !empty($_FILES['file'])) {
+if (isset($_FILES['file']['name']) && !empty($_FILES['file']['name'])) {
     // prepare file's name and save it
     $uploaddir = '../uploads/';
     $origfilename = $_FILES['file']['name'];
