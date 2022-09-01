@@ -41,7 +41,7 @@ $thispost = mysqli_fetch_array($post);
                     <input type="text" name="title" id="title" value="<?php echo $thispost['title'] ?>">
 
                     <label for="content">Text:</label>
-                    <textarea name="content" id="content" cols="30" rows="10" value="<?php echo $thispost['content'] ?>"></textarea>
+                    <textarea name="content" id="content" cols="30" rows="10"><?php echo $thispost['content'] ?></textarea>
 
                     <label for="file">Picture, video or audio:</label>
                     <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
