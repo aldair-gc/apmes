@@ -28,8 +28,7 @@ $post = mysqli_query($conn, "SELECT * FROM posts WHERE id=$urlid");
 
                         <?php while ($row = mysqli_fetch_array($groups)) { ?>
                             <div class="radio-option">
-                                <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>"
-                                    <?php echo (($row['groupname'] == $post['groupname']) ? ' checked' : '') ?>>
+                                <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>">
                                 <label for="<?php echo $row['groupname']; ?>"><?php echo $row['groupname']; ?></label>
                             </div>
                         <?php } ?>
