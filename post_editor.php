@@ -12,7 +12,7 @@ $post = mysqli_query($conn, "SELECT * FROM posts WHERE id=$urlid");
     <div class="posts-container box">
         <div class="filter-menu">
             <ul>
-                <li id="back-to-editor-button" class="button"><a href="/post_editor.php">back</a></li>
+                <li id="back-to-editor-button" class="button"><a href="/feed_editor.php">back</a></li>
             </ul>
             <ul>
                 <li id="new-group-button" class="button"><a href="/feed_newgroup.php">new group</a></li>
