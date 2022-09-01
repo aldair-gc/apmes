@@ -77,7 +77,7 @@ main {
     height: 600px;
     overflow: hidden;
     background-image: url("../images/zac-durant-_6HzPU9Hyfg-unsplash.jpg");
-    background-position: 50% -300px;
+    background-position: 50% 0;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -411,3 +411,22 @@ main {
 }
 
 /* NEW POST - END */
+/* MSG - START */
+
+.msg {
+    position: fixed;
+    top: 80px;
+    right: calc(-10%);
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px #555;
+    border-radius: 15px;
+    padding: 20px;
+    transition: right 0.5s;
+}
+
+.msg .activex {
+    right: 30px;
+}
+
+/* MSG - END */

@@ -1,1 +1,31 @@
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2937.6989748591195!2d-71.8084648360956!3d42.5829096136237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3e657847c3ead%3A0x28e614e0dae2564!2sApostolic%20and%20Prophetic%20Ministries%20El%20Shaddai!5e0!3m2!1spt-BR!2sbr!4v1661725255808!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+Messages
+1: Wrong password!
+2: Email not registered!
+3: Error processing register request!
+4: Could not prepare statement!
+5: Missing data!
+6: All field must be fulfilled!
+7: Invalid email!
+8: Password must be between 5 and 20 characters long!
+9: Email already registered!
+10: Post edited successfully!
+11: Post deleted successfully!
+
+
+ToDo's
+- create message handler
+- prepare responsive design
+- create contact page
+- prepare prayers request to save a list on db and load a page on home
+- prepare church model page
+- prepare missions model page
+- prepare agenda model page
+- prepare pictures model page
+- prepare videos model page
+- prepare radio model page
+- fulfill footer
+- add pr-BR support
+- check final details
+
