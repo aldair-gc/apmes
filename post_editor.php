@@ -28,7 +28,8 @@ $post = mysqli_query($conn, "SELECT * FROM posts WHERE id=$urlid");
 
                         <?php while ($row = mysqli_fetch_array($groups)) { ?>
                             <div class="radio-option">
-                                <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>">
+                                <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>"
+                                    <?php echo (($row['groupname'] == $post->groupname) ? ' checked' : '') ?>>
                                 <label for="<?php echo $row['groupname']; ?>"><?php echo $row['groupname']; ?></label>
                             </div>
                         <?php } ?>
@@ -36,17 +37,17 @@ $post = mysqli_query($conn, "SELECT * FROM posts WHERE id=$urlid");
                     </div>
 
                     <label for="title">Title:</label>
-                    <input type="text" name="title" id="title" value="<?php echo $post['title'] ?>">
+                    <input type="text" name="title" id="title" value="<?php echo $post->title ?>">
 
                     <label for="content">Text:</label>
-                    <textarea name="content" id="content" cols="30" rows="10" value="<?php echo $post['content'] ?>"></textarea>
+                    <textarea name="content" id="content" cols="30" rows="10" value="<?php echo $post->content ?>"></textarea>
 
                     <label for="file">Picture, video or audio:</label>
                     <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
                     <input type="file" name="file" id="file">
 
                     <input type="hidden" name="id" value="<?php echo $urlid ?>">
-                    <input type="hidden" name="groupname" value="<?php echo $post['groupname'] ?>">
+                    <input type="hidden" name="groupname" value="<?php echo $post->groupname ?>">
 
                     <input type="submit" value="Update">
                 </form>
