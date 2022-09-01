@@ -3,7 +3,7 @@ require('session.php');
 require('db.php');
 
 // check if the fields exist
-if (!isset($_POST['groupname'], $_POST['title'], $_POST['content'], $_POST['id']) {
+if (!isset($_POST['groupname'], $_POST['title'], $_POST['content'], $_POST['id'])) {
     exit('Data missing.');
 }
 
