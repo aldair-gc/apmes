@@ -1,6 +1,6 @@
 <?php
-require('php/session.php');
-require('php/db.php');
+require_once('php/session.php');
+require_once('php/db.php');
 require('php/fetch_groups.php');
 require('php/editpost.php');
 require('components/header');

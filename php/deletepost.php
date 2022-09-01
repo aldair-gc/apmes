@@ -1,6 +1,6 @@
 <?php
-require('session.php');
-require('db.php');
+require_once('session.php');
+require_once('db.php');
 
 // delete post
 if ($stmt = $conn->prepare('DELETE FROM posts WHERE id=?')) {

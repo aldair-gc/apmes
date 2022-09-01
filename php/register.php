@@ -1,5 +1,5 @@
 <?php
-require('db.php');
+require_once('db.php');
 
 // check if the fields exist
 if (!isset($_POST['name'], $_POST['password'], $_POST['email'])) {

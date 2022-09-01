@@ -1,6 +1,6 @@
 <?php
-require('session.php');
-require('db.php');
+require_once('session.php');
+require_once('db.php');
 
 // check if the fields exist
 if (!isset($_POST['groupname'], $_POST['title'], $_POST['content'], $_POST['id'])) {

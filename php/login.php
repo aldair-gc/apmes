@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('db.php');
+require_once('db.php');
 
 // check the submitted data
 if ( !isset($_POST['email'], $_POST['password']) ) {
