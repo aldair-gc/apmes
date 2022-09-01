@@ -48,6 +48,7 @@ $post = mysqli_query($conn, "SELECT * FROM posts WHERE id=$urlid");
                     <input type="file" name="file" id="file">
 
                     <input type="hidden" name="id" value="<?php echo $urlid ?>">
+                    <input type="hidden" name="groupname" value="<?php echo $post['groupname'] ?>">
 
                     <input type="submit" value="Update">
                 </form>
