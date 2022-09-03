@@ -22,3 +22,5 @@
             <li class="menu-opt"><a href="/login.php">Login</a></li>
         </ul>
     </nav>
+    <div class="msg-container"></div>
+    
