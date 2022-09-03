@@ -1,5 +1,5 @@
 <?php
-require('../php/cache.php');
+require('/php/cache.php');
 ?>
 
 <footer>
