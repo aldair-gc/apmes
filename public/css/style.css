@@ -82,7 +82,7 @@ main {
     height: 500px;
     overflow: hidden;
     background-image: url("../images/zac-durant-_6HzPU9Hyfg-unsplash.jpg");
-    background-position: center -300px;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -192,8 +192,7 @@ main {
     box-shadow: 0 0 5px #888;
     background: #fff;
     max-width: 800px;
-    min-width: 400px;
-    flex-grow: 1;
+    min-width: 300px;
 }
 
 .post-media {
