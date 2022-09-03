@@ -17,6 +17,7 @@ body {
     min-height: 100vh;
     justify-content: center;
     background: linear-gradient(to bottom, #027db6, #a3d0e5);
+    padding-top: 80px;
 }
 
 nav {
