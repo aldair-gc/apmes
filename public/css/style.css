@@ -77,10 +77,12 @@ main {
 
 .intro {
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: 600px;
     overflow: hidden;
     background-image: url("../images/zac-durant-_6HzPU9Hyfg-unsplash.jpg");
-    background-position: 50% -200px;
+    background-position: 50% -300px;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -176,16 +178,17 @@ main {
 .post-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
 }
 
 .post {
     display: flex;
+    flex-direction: column;
     gap: 20px;
     min-height: 150px;
     border-radius: 15px;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 0 0 5px #888;
     background: #fff;
     max-width: 800px;
@@ -194,8 +197,8 @@ main {
 }
 
 .post-media {
-    height: 200px;
-    width: 200px;
+    height: auto;
+    width: 100%;
     border-radius: 15px;
     box-shadow: 0 0 5px #444;
 }
@@ -606,6 +609,16 @@ footer {
         height: 60px;
         margin: 0;
         padding: 0 20px;
+    }
+
+    .post {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post-media {
+        height: auto;
+        width: 100%;
     }
 }
 
