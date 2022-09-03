@@ -8,7 +8,7 @@ if (filters) {
         const filterButton = e.target.innerText; // get button's text
         const allPosts = document.querySelectorAll(".post"); // select all these posts
         const all = document.querySelector("#all");
-        
+
         const groups = document.querySelectorAll(".groupname");
         const groupObjects = [all];
         groups.forEach((value) => groupObjects.push(value));
@@ -54,8 +54,8 @@ codeList = new Map([
     ["7", "Invalid email!"],
     ["8", "Password must be between 5 and 20 characters long!"],
     ["9", "Email already registered!"],
-    ["10",  "Post edited successfully!"],
-    ["11",  "Post deleted successfully!"],
+    ["10", "Post edited successfully!"],
+    ["11", "Post deleted successfully!"],
 ]);
 
 const msgCodesInUrl = url.searchParams.getAll("msg");
@@ -88,17 +88,24 @@ window.onload = function () {
 const burgerMenu = document.querySelector("#burgermenu");
 burgerMenu.addEventListener("click", () => {
     document.querySelectorAll(".menu-opt").forEach((li) => {
-        if (li.style.display === "block") {
+        if (li.style.display === "flex") {
             li.style.display = "none"
+            burgerMenu.innerHTML = `<i class="fa-sharp fa-solid fa-bars"></i>`;
         } else {
-            li.style.display = "block";
+            li.style.display = "flex";
+            burgerMenu.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
         }
     });
 });
 
 window.addEventListener("resize", () => {
-    document.querySelectorAll("menu-opt").forEach((li) => {
-        li.style.display = "block";
-    })
+    if (innerWidth > 700) {
+        burgerMenu.style.display = "none";
+        document.querySelectorAll(".menu-opt").forEach((li) => li.style.display = "flex");
+    } else {
+        burgerMenu.style.display = "flex";
+        burgerMenu.innerHTML = `<i class="fa-sharp fa-solid fa-bars"></i>`;
+        document.querySelectorAll(".menu-opt").forEach((li) => li.style.display = "none");
+    }
 });
 

@@ -9,14 +9,15 @@
 </head>
 
 <body>
-    <nav>
+<nav>
         <a id="logo" href="/index.php">
             <img src="/public/images/logo-png-small.png" alt="Logo">
             Apostolic & Prophetic Ministries El Shaddai
         </a>
-        <ul>
-            <li><a href="/index.php">Home</a></li>
-            <li><a href="/feed.php">Feed</a></li>
-            <li><a href="/login.php">Login</a></li>
+        <ul id="menu">
+            <li id="burgermenu"><i class="fa-sharp fa-solid fa-bars"></i></li>
+            <li class="menu-opt"><a href="/index.php">Home</a></li>
+            <li class="menu-opt"><a href="/feed.php">Feed</a></li>
+            <li class="menu-opt"><a href="/login.php">Login</a></li>
         </ul>
     </nav>
