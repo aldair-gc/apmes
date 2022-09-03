@@ -65,7 +65,13 @@ window.onload = function () {
     // Message box
     let html = ``;
     msgCodesInUrl.map((code) => {
-        html += `<div class="msg show">${codeList.get(code)}</div>`
+        html += `
+        <div class="msg show">
+            <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+            ${codeList.get(code)}
+            <div class="msg-bar"></div>
+        </div>
+        `;
     });
     msgContainer.innerHTML = html;
     const allMsg = document.querySelectorAll(".msg");
@@ -74,7 +80,25 @@ window.onload = function () {
     allMsg.forEach(msg => {
         msg.addEventListener("click", (e) => {
             msg.classList.remove("show");
-            console.log("click");
         });
     });
 };
+
+// burgermenu
+const burgerMenu = document.querySelector("#burgermenu");
+burgerMenu.addEventListener("click", () => {
+    document.querySelectorAll(".menu-opt").forEach((li) => {
+        if (li.style.display === "block") {
+            li.style.display = "none"
+        } else {
+            li.style.display = "block";
+        }
+    });
+});
+
+window.addEventListener("resize", () => {
+    document.querySelectorAll("menu-opt").forEach((li) => {
+        li.style.display = "block";
+    })
+});
+
