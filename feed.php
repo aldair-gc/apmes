@@ -1,4 +1,5 @@
 <?php
+require('php/cache.php');
 require('php/db.php');
 require('php/fetch_groups.php');
 require('php/fetch_posts.php');

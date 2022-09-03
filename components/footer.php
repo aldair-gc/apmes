@@ -1,3 +1,7 @@
+<?php
+require('../php/cache.php');
+?>
+
 <footer>
         <div class="footer-container">
             <div class="footer-col">footer1</div>

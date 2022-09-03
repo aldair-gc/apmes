@@ -1,4 +1,7 @@
-<?php require('components/header.php'); ?>
+<?php
+require('php/cache.php');
+require('components/header.php');
+?>
 
 <main>
     <div class="form-box box">
