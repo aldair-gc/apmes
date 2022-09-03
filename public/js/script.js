@@ -47,7 +47,7 @@ if (filters) {
 const codeList = new Map([
     ["1", "Wrong password!"],
     ["2", "Email not registered!"],
-    ["3", "Error processing register request!"],
+    ["3", "Error processing request!"],
     ["4", "Could not prepare statement!"],
     ["5", "Missing data!"],
     ["6", "All field must be fulfilled!"],
@@ -56,6 +56,9 @@ const codeList = new Map([
     ["9", "Email already registered!"],
     ["10", "Post edited successfully!"],
     ["11", "Post deleted successfully!"],
+    ["12", "A group is already registered with this name!"],
+    ["13", "New group created!"],
+    ["14", "Session closed. Login required!"],
 ]);
 
 const msgCodesInUrl = url.searchParams.getAll("msg");

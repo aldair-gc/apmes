@@ -4,7 +4,22 @@ require_once('db.php');
 
 // check the submitted data
 if ( !isset($_POST['email'], $_POST['password']) ) {
-    exit('Email and password are required.');
+    header('Location: /login.php?msg=6');
+}
+
+if ( empty($_POST['email']) || empty($_POST['password']) ) {
+    header('Location: /login.php?msg=6');
+}
+
+// validate email
+if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    header('Location: /register.php?msg=7');
+}
+
+// character length check
+if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
+    header('Location: /register.php?msg=8');
+
 }
 
 // prepare SQL statement
@@ -36,4 +51,3 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
 
 $conn->close();
 ?>
-\

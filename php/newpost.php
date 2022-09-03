@@ -4,12 +4,12 @@ require_once('db.php');
 
 // check if the fields exist
 if (!isset($_POST['groupname'], $_POST['title'], $_POST['content'])) {
-    exit('Data missing.');
+    header('Location: /feed_newpost.php?msg=5');
 }
 
 // check if the fields are not empty
 if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['content'])) {
-    exit('The fields must be fulfilled.');
+    header('Location: /feed_newpost.php?msg=6');
 }
 
 // handle submitted file
