@@ -44,7 +44,7 @@ if (filters) {
 
 
 // Make the messages from url codes
-codeList = new Map([
+const codeList = new Map([
     ["1", "Wrong password!"],
     ["2", "Email not registered!"],
     ["3", "Error processing register request!"],
