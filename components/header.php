@@ -1,3 +1,9 @@
+<?php
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -19,7 +25,6 @@
             <li id="burgermenu"><i class="fa-sharp fa-solid fa-bars"></i></li>
             <li class="menu-opt"><a href="/index.php">Home</a></li>
             <li class="menu-opt"><a href="/feed.php">Feed</a></li>
-            <li class="menu-opt"><a href="/login.php">Login</a></li>
         </ul>
     </nav>
     <div class="msg-container"></div>
