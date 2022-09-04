@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Apostolic & Prophetic Ministries El Shaddai</title>
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-    <script src="https://kit.fontawesome.com/2cc3b4dcd6.js" crossorigin="anonymous"></script>
     <meta http-equiv="expires" content="Sun, 01 Jan 2014 00:00:00 GMT"/>
     <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <script src="https://kit.fontawesome.com/2cc3b4dcd6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
