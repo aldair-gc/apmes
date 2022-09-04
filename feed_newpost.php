@@ -6,15 +6,25 @@ require('components/header.php');
 ?>
 
 <main>
-<div class="bg-blues"></div>
+    <div class="bg-blues"></div>
 
-    <div class="posts-container box">
+    <div class="container box">
         <div class="filter-menu">
             <ul>
-                <li><a class="midbutton" href="/feed_editor.php"><i class="fa-solid fa-arrow-left"></i> back</a></li>
+                <li>
+                    <a class="midbutton" href="/feed_editor.php">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        back
+                    </a>
+                </li>
             </ul>
             <ul>
-                <li><a class="midbutton" href="/feed_newgroup.php"><i class="fa-regular fa-square-plus"></i> new group</a></li>
+                <li>
+                    <a class="midbutton" href="/feed_newgroup.php">
+                        <i class="fa-regular fa-square-plus"></i>
+                        new group
+                    </a>
+                </li>
             </ul>
         </div>
 
