@@ -305,6 +305,10 @@ main {
     gap: 10px;
 }
 
+.post-control a {
+    text-decoration: none;
+}
+
 /* POSTS - END */
 /* FILTER-MENU - START */
 

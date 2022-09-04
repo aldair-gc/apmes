@@ -38,12 +38,12 @@ require('components/header.php');
                     </div>
                     <div class="post-control">
                         <a
-                            class="smallbutton" class="post-edit"
+                            class="smallbutton"
                             href="<?php echo '/post_editor.php?id=' . $row['id']; ?>">
                             edit
                         </a>
                         <a
-                            class="smallbutton" class="post-delete"
+                            class="smallbutton"
                             href="<?php echo '/post_delete.php?id=' . $row['id']; ?>">
                             delete
                         </a>
