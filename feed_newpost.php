@@ -14,7 +14,7 @@ require('components/header.php');
                 <li id="back-to-editor-button" class="midbutton"><a href="/feed_editor.php">back</a></li>
             </ul>
             <ul>
-                <li id="new-group-button" class="midbutton"><a href="/feed_newgroup.php">new group</a></li>
+                <li id="new-group-button" class="midbutton"><a href="/feed_newgroup.php"><i class="fa-regular fa-square-plus"></i> new group</a></li>
             </ul>
         </div>
 

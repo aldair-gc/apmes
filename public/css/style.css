@@ -28,6 +28,11 @@
     z-index: -1;
 }
 
+.bg-red {
+    background-color: #ea5555;
+
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -302,7 +307,7 @@ main {
 .post-control {
     display: flex;
     gap: 10px;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .post-control a {
@@ -376,22 +381,22 @@ footer {
 
 .smallbutton {
     background: #fff;
-    box-shadow: 0 0 3px #555;
-    border: 0;
+    padding: 10px 20px;
+    border: 1px solid #027db6;
     border-radius: 8px;
-    padding: 5px 10px;
     cursor: pointer;
     color: #000;
 }
 
 .midbutton {
     background: #fff;
-    padding: 5px 15px;
+    padding: 10px 20px;
     border: 1px solid #027db6;
     border-radius: 8px;
-    height: 30px;
-    cursor: default;
+    cursor: pointer;
     color: #000;
+    height: 40px;
+
 }
 
 #radio-list {

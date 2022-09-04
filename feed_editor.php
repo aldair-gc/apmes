@@ -18,8 +18,8 @@ require('components/header.php');
                 <?php } ?>
             </ul>
             <ul id="filter-right-menu">
-                <li id="new-post-button" class="midbutton"><a href="/feed_newpost.php">new post</a></li>
-                <li id="new-group-button" class="midbutton"><a href="/feed_newgroup.php">new group</a></li>
+                <li id="new-post-button" class="midbutton"><a href="/feed_newpost.php"><i class="fa-solid fa-plus"></i> new post</a></li>
+                <li id="new-group-button" class="midbutton"><a href="/feed_newgroup.php"><i class="fa-regular fa-square-plus"></i> new group</a></li>
             </ul>
         </div>
 
@@ -38,14 +38,14 @@ require('components/header.php');
                     </div>
                     <div class="post-control">
                         <a
-                            class="smallbutton"
+                            class="midbutton"
                             href="<?php echo '/post_editor.php?id=' . $row['id']; ?>">
-                            edit
+                            <i class="fa-solid fa-pen-to-square"></i> edit
                         </a>
                         <a
-                            class="smallbutton"
+                            class="midbutton bg-red"
                             href="<?php echo '/post_delete.php?id=' . $row['id']; ?>">
-                            delete
+                            <i class="fa-solid fa-eraser"></i> delete
                         </a>
                     </div>
                 </div>
