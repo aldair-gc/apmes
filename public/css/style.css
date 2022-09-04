@@ -263,6 +263,7 @@ main {
 
 .post-texts {
     width: 100%;
+    flex-grow: 1;
 }
 
 .posts-header {
@@ -724,10 +725,6 @@ footer {
         height: 60px;
         margin: 0;
         padding: 0 20px;
-    }
-
-    .post {
-        flex-direction: column;
     }
 
     .post-media {
