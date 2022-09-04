@@ -1,5 +1,4 @@
 <?php
-require('php/cache.php');
 require('components/header.php');
 ?>
 

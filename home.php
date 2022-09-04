@@ -1,5 +1,4 @@
 <?php
-require('php/cache.php');
 require('php/session.php');
 require('components/header.php');
 ?>

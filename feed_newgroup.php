@@ -1,5 +1,4 @@
 <?php
-require('php/cache.php');
 require('php/session.php');
 require('php/db.php');
 require('php/fetch_groups.php');
