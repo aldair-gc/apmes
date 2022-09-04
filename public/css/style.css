@@ -4,30 +4,6 @@
     box-sizing: border-box;
 }
 
-.box {
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 5px #555;
-    border-radius: 15px;
-}
-
-.marg20px {
-    margin: 20px;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.bg-blues {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to bottom, #027db6, #a3d0e5);
-    z-index: -1;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -253,6 +229,7 @@ main {
     flex-direction: column;
     gap: 10px;
     justify-content: center;
+    align-items: center;
     width: 100%;
     overflow: hidden;
 }
@@ -427,6 +404,43 @@ footer {
 
 }
 
+.box {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px #555;
+    border-radius: 15px;
+}
+
+.marg20px {
+    margin: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-blues {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #027db6, #a3d0e5);
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    gap: 20px;
+    overflow: hidden;
+    padding: 20px;
+    margin: 20px;
+}
+
 /* GENERAL - END */
 /* FORM-BOX - START */
 
@@ -474,17 +488,14 @@ footer {
 /* NEW POST - START */
 
 .new-post {
-    width: 800px;
     max-width: 100%;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
 }
 
-.new-post .post {
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-}
-
-.new-post .post form {
+.new-post form {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -712,7 +723,6 @@ footer {
 
     .post {
         flex-direction: column;
-        align-items: center;
     }
 
     .post-media {

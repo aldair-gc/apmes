@@ -11,43 +11,41 @@ require('components/header.php');
     <div class="posts-container box">
         <div class="filter-menu">
             <ul>
-                <li id="back-to-editor-button" class="midbutton"><a href="/feed_editor.php">back</a></li>
+                <li><a class="midbutton" href="/feed_editor.php"><i class="fa-solid fa-arrow-left"></i> back</a></li>
             </ul>
             <ul>
-                <li id="new-group-button" class="midbutton"><a href="/feed_newgroup.php"><i class="fa-regular fa-square-plus"></i> new group</a></li>
+                <li><a class="midbutton" href="/feed_newgroup.php"><i class="fa-regular fa-square-plus"></i> new group</a></li>
             </ul>
         </div>
 
-        <div class="new-post">
-            <div class="post">
-                <h2>Create new post</h2>
+        <div class="new-post post">
+            <h2>Create new post</h2>
 
-                <form enctype="multipart/form-data" action="/php/newpost.php" method="POST">
-                    <label for="groupname">Group:</label>
-                    <div class="radio-list">
+            <form enctype="multipart/form-data" action="/php/newpost.php" method="POST">
+                <label for="groupname">Group:</label>
+                <div class="radio-list">
 
-                        <?php while ($row = mysqli_fetch_array($groups)) { ?>
-                            <div class="radio-option">
-                                <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>">
-                                <label for="<?php echo $row['groupname']; ?>"><?php echo $row['groupname']; ?></label>
-                            </div>
-                        <?php } ?>
+                    <?php while ($row = mysqli_fetch_array($groups)) { ?>
+                        <div class="radio-option">
+                            <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>">
+                            <label for="<?php echo $row['groupname']; ?>"><?php echo $row['groupname']; ?></label>
+                        </div>
+                    <?php } ?>
 
-                    </div>
+                </div>
 
-                    <label for="title">Title:</label>
-                    <input type="text" name="title" id="title">
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title">
 
-                    <label for="content">Text:</label>
-                    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                <label for="content">Text:</label>
+                <textarea name="content" id="content" cols="30" rows="10"></textarea>
 
-                    <label for="file">Picture, video or audio:</label>
-                    <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
-                    <input type="file" name="file" id="file">
+                <label for="file">Picture, video or audio:</label>
+                <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
+                <input type="file" name="file" id="file">
 
-                    <input type="submit" value="Save">
-                </form>
-            </div>
+                <input type="submit" value="Save">
+            </form>
         </div>
     </div>
 </main>

@@ -11,30 +11,28 @@ require('components/header.php');
     <div class="posts-container box">
         <div class="filter-menu">
             <ul>
-                <li id="back-to-editor-button" class="midbutton"><a href="/feed_editor.php">back</a></li>
+                <li id="back-to-editor-button"><a class="midbutton" href="/feed_editor.php"><i class="fa-solid fa-arrow-left"></i> back</a></li>
             </ul>
             <ul>
-                <li id="new-group-button" class="midbutton"><a href="/feed_newpost.php">new post</a></li>
+                <li id="new-group-button"><a class="midbutton" href="/feed_newpost.php"><i class="fa-solid fa-plus"></i> new post</a></li>
             </ul>
         </div>
 
-        <div class="new-post">
-            <div class="post">
-                <h2>Create new group</h2>
-                <ul id="groups-list">
+        <div class="new-post post">
+            <h2>Create new group</h2>
+            <ul id="groups-list">
 
-                <?php while ($row = mysqli_fetch_array($groups)) { ?>
-                    <li class="smallbutton"><?php echo $row['groupname']; ?></li>
-                <?php } ?>
+            <?php while ($row = mysqli_fetch_array($groups)) { ?>
+                <li class="smallbutton"><?php echo $row['groupname']; ?></li>
+            <?php } ?>
 
-                </ul>
-                <form action="/php/newgroup.php" method="post">
-                    <label for="groupname">New group:</label>
-                    <input type="text" name="groupname" id="groupname">
+            </ul>
+            <form action="/php/newgroup.php" method="post">
+                <label for="groupname">New group:</label>
+                <input type="text" name="groupname" id="groupname">
 
-                    <input type="submit" value="Save">
-                </form>
-            </div>
+                <input type="submit" value="Save">
+            </form>
         </div>
     </div>
 </main>
