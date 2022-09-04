@@ -237,12 +237,14 @@ main {
 
 .posts-container {
     margin-top: 20px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
     width: 100%;
     overflow: hidden;
+    background: linear-gradient(to bottom, #027db6, #a3d0e5);
 }
 
 .post-container {
