@@ -11,10 +11,10 @@ require('components/header.php');
     <div class="posts-container box">
         <div class="filter-menu">
             <ul>
-                <li id="back-to-editor-button" class="button"><a href="/feed_editor.php">back</a></li>
+                <li id="back-to-editor-button" class="midbutton"><a href="/feed_editor.php">back</a></li>
             </ul>
             <ul>
-                <li id="new-group-button" class="button"><a href="/feed_newpost.php">new post</a></li>
+                <li id="new-group-button" class="midbutton"><a href="/feed_newpost.php">new post</a></li>
             </ul>
         </div>
 
@@ -24,7 +24,7 @@ require('components/header.php');
                 <ul id="groups-list">
 
                 <?php while ($row = mysqli_fetch_array($groups)) { ?>
-                    <li class="button"><?php echo $row['groupname']; ?></li>
+                    <li class="smallbutton"><?php echo $row['groupname']; ?></li>
                 <?php } ?>
 
                 </ul>

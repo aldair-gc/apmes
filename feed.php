@@ -11,9 +11,9 @@ require('components/header.php');
     <div class="posts-container">
         <div class="filter-menu">
             <ul id="filters">
-                <li id="all" class="button active">all</li>
+                <li id="all" class="smallbutton active">all</li>
                 <?php while ($row = mysqli_fetch_array($groups)) { ?>
-                    <li id="<?php echo $row['groupname']; ?>" class="groupname button"><?php echo $row['groupname']; ?></li>
+                    <li id="<?php echo $row['groupname']; ?>" class="groupname smallbutton"><?php echo $row['groupname']; ?></li>
                 <?php } ?>
             </ul>
         </div>

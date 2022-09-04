@@ -12,14 +12,14 @@ require('components/header.php');
     <div class="posts-container">
         <div class="filter-menu">
             <ul id="filters">
-                <li id="all" class="button active">all</li>
+                <li id="all" class="smallbutton active">all</li>
                 <?php while ($row = mysqli_fetch_array($groups)) { ?>
-                    <li id="<?php echo $row['groupname']; ?>" class="groupname button"><?php echo $row['groupname']; ?></li>
+                    <li id="<?php echo $row['groupname']; ?>" class="groupname smallbutton"><?php echo $row['groupname']; ?></li>
                 <?php } ?>
             </ul>
-            <ul>
-                <li id="new-post-button" class="button"><a href="/feed_newpost.php">new post</a></li>
-                <li id="new-group-button" class="button"><a href="/feed_newgroup.php">new group</a></li>
+            <ul id="filter-right-menu">
+                <li id="new-post-button" class="midbutton"><a href="/feed_newpost.php">new post</a></li>
+                <li id="new-group-button" class="midbutton"><a href="/feed_newgroup.php">new group</a></li>
             </ul>
         </div>
 
@@ -38,12 +38,12 @@ require('components/header.php');
                     </div>
                     <div class="post-control">
                         <a
-                            class="button" id="post-edit"
+                            class="smallbutton" class="post-edit"
                             href="<?php echo '/post_editor.php?id=' . $row['id']; ?>">
                             edit
                         </a>
                         <a
-                            class="button" id="post-delete"
+                            class="smallbutton" class="post-delete"
                             href="<?php echo '/post_delete.php?id=' . $row['id']; ?>">
                             delete
                         </a>
