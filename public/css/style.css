@@ -252,6 +252,7 @@ main {
     background: #fff;
     max-width: 1000px;
     min-width: 300px;
+    max-height: 100vh;
 }
 
 .post-media {
