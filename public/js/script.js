@@ -14,7 +14,7 @@ if (filters) {
         groups.forEach((value) => groupObjects.push(value));
 
         // check if the target is a button
-        if (!e.target.classList.contains("button")) return;
+        if (!e.target.classList.contains("smallbutton")) return;
 
         // buttons colours
         groupObjects.forEach((x) => {
