@@ -257,9 +257,10 @@ main {
 
 .post-media {
     height: auto;
-    width: 100%;
+    width: auto;
     border-radius: 15px;
     box-shadow: 0 0 5px #444;
+    flex-shrink: 1;
 }
 
 .post-texts {
