@@ -238,9 +238,10 @@ main {
 .posts-container {
     margin-top: 20px;
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 .post-container {
@@ -293,6 +294,11 @@ main {
 
 /* POSTS - END */
 /* FILTER-MENU - START */
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .filter-menu {
     display: flex;
