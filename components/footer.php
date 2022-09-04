@@ -12,7 +12,7 @@
             </div>
         </div>
     </footer>
-    <script src="/public/js/script.js" type="module"></script>
+    <script src="/public/js/script.js?v=<?php microtime() ?>" type="module"></script>
 </body>
 
 </html>
