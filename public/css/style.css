@@ -236,6 +236,7 @@ main {
 /* POSTS - START */
 
 .posts-container {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -295,6 +296,7 @@ main {
 
 .filter-menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
 }
