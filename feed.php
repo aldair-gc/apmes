@@ -7,7 +7,7 @@ require('components/header.php');
 ?>
 
 <main>
-    <div class="posts-container box">
+    <div class="posts-container">
         <div class="filter-menu">
             <ul id="filters">
                 <li id="all" class="button active">all</li>
