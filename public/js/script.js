@@ -19,11 +19,9 @@ if (filters) {
         // buttons colours
         groupObjects.forEach((x) => {
             if (x.innerText === filterButton) {
-                x.style.background = "#027db6";
-                x.style.color = "#fff";
+                x.style.background = "#a3d0e5";
             } else {
                 x.style.background = "#fff";
-                x.style.color = "#000";
             }
         });
 

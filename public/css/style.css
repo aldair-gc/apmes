@@ -79,7 +79,6 @@ main {
     flex-direction: column;
     flex-grow: 2;
     gap: 20px;
-    padding-bottom: 20px;
 }
 
 .intro {
@@ -238,6 +237,7 @@ main {
 
 .posts-container {
     padding-top: 10px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -304,7 +304,6 @@ main {
     padding: 10px;
     list-style: none;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
 .filter-menu {
