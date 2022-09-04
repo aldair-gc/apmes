@@ -508,6 +508,7 @@ footer {
     cursor: default;
     overflow: hidden;
     padding: 10px;
+    z-index: 10;
 }
 
 .msg-container i {
