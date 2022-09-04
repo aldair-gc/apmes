@@ -4,7 +4,7 @@
 ToDo's
 - create message handler OK
 - prepare responsive design OK
-- create contact page
+- create contact page OK
 - prepare prayers request to save a list on db and load a page on home
 - prepare church model page
 - prepare missions model page
