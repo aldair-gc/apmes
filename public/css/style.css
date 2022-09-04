@@ -128,7 +128,7 @@ main {
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #027db6, #a3d0e5);
+    background: linear-gradient(to bottom, #027db6, #a3d0e5);
 }
 
 .square-image {
@@ -547,7 +547,7 @@ footer {
 
 .show {
     display: flex;
-    transform: translateX(0px);
+    transform: translateX(420px);
     -webkit-animation: 5s forwards 0s toast;
     animation: 5s forwards 0s toast;
 }
