@@ -296,9 +296,13 @@ main {
 /* POSTS - END */
 /* FILTER-MENU - START */
 
-.filters {
+#filters {
     display: flex;
     flex-wrap: wrap;
+    padding: 10px;
+    list-style: none;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .filter-menu {
@@ -306,13 +310,6 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-}
-
-.filter-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
 }
 
 .filter-menu ul li,
