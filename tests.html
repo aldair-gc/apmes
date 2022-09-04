@@ -42,35 +42,59 @@
                 </ul>
             </div>
 
-            <div class="new-post post">
-                <h2>Create new post</h2>
 
-                <form enctype="multipart/form-data" action="/php/newpost.php" method="POST">
-                    <label for="groupname">Group:</label>
-                    <div class="radio-list">
+            <div class="post-container">
 
-                        <div class="radio-option">
-                            <input type="radio" name="groupname">
+                <div class="post">
+                    <img class="post-media" src="/public/images/church.jpg"></img>
+                    <div class="post-texts">
+                        <div class="posts-header">
+                            <div class="posts-title">title</div>
+                            <div class="posts-date">date</div>
                         </div>
-
+                        <div class="posts-content">Condition statement: This is a valid PHP expression that will be
+                            evaluated in order to return a Boolean value. Statement_1: This will be the statement that
+                            will be executed when the conditional results will return true or be in a true state.
+                            Statement_2: This will be the statement that will be executed when the conditional results
+                            will return true or be in a false state.
+                        </div>
                     </div>
+                    <div class="post-control">
+                        <a class="midbutton" href="id">
+                            <i class="fa-solid fa-pen-to-square"></i> edit
+                        </a>
+                        <a class="midbutton bg-red" href="id">
+                            <i class="fa-solid fa-eraser"></i> delete
+                        </a>
+                    </div>
+                </div>
+                <div class="post">
+                    <img class="post-media" src="/public/images/church.jpg"></img>
+                    <div class="post-texts">
+                        <div class="posts-header">
+                            <div class="posts-title">title</div>
+                            <div class="posts-date">date</div>
+                        </div>
+                        <div class="posts-content">Condition statement: This is a valid PHP expression that will be
+                            evaluated in order to return a Boolean value. Statement_1: This will be the statement that
+                            will be executed when the conditional results will return true or be in a true state.
+                            Statement_2: This will be the statement that will be executed when the conditional results
+                            will return true or be in a false state.
+                        </div>
+                    </div>
+                    <div class="post-control">
+                        <a class="midbutton" href="id">
+                            <i class="fa-solid fa-pen-to-square"></i> edit
+                        </a>
+                        <a class="midbutton bg-red" href="id">
+                            <i class="fa-solid fa-eraser"></i> delete
+                        </a>
+                    </div>
+                </div>
 
-                    <label for="title">Title:</label>
-                    <input type="text" name="title" id="title">
-
-                    <label for="content">Text:</label>
-                    <textarea name="content" id="content" cols="30" rows="10"></textarea>
-
-                    <label for="file">Picture, video or audio:</label>
-                    <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
-                    <input type="file" name="file" id="file">
-
-                    <input type="submit" value="Save">
-                </form>
             </div>
-        </div>
 
-        <!-- CONTENT TO HERE -->
+            <!-- CONTENT TO HERE -->
     </main>
 
     <footer>
