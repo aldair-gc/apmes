@@ -266,6 +266,7 @@ main {
 .post-texts {
     width: 100%;
     flex-grow: 1;
+    flex-shrink: 0;
 }
 
 .posts-header {
@@ -283,6 +284,7 @@ main {
     display: flex;
     gap: 10px;
     justify-content: space-between;
+    flex-shrink: 0;
 }
 
 .post-control a {
