@@ -6,6 +6,8 @@ require('components/header.php');
 ?>
 
 <main>
+<div class="bg-blues"></div>
+
     <div class="posts-container">
         <div class="filter-menu">
             <ul id="filters">

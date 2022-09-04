@@ -255,7 +255,6 @@ main {
     justify-content: center;
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(to bottom, #027db6, #a3d0e5);
 }
 
 .post-container {
