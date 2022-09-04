@@ -526,11 +526,12 @@ footer {
     gap: 20px;
     width: 400px;
     top: 70px;
-    right: 0px;
+    right: -420px;
     cursor: default;
     overflow: hidden;
     padding: 10px;
     z-index: 10;
+
 }
 
 .msg-container i {
