@@ -3,6 +3,8 @@ require('components/header.php');
 ?>
 
 <main>
+<div class="bg-blues"></div>
+
     <div class="form-box box">
         <h1>Register</h1>
         <form action="/php/register.php" method="post">

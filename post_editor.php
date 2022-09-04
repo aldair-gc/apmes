@@ -9,6 +9,8 @@ $thispost = mysqli_fetch_array($post);
 ?>
 
 <main>
+<div class="bg-blues"></div>
+
     <div class="posts-container box">
         <div class="filter-menu">
             <ul>

@@ -18,6 +18,16 @@
     text-align: center;
 }
 
+.bg-blues {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #027db6, #a3d0e5);
+    z-index: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
