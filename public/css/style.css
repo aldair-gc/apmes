@@ -252,18 +252,17 @@ main {
     background: #fff;
     max-width: 1000px;
     min-width: 300px;
-    max-height: 100vh;
     overflow: hidden;
 }
 
 .post-media {
     display: block;
-    max-height: 50vh;
-    width: auto;
+    max-height: 60vh;
+    max-width: 100%;
     margin: auto;
     border-radius: 15px;
     box-shadow: 0 0 5px #444;
-    flex: 0 1 auto;
+    flex: 0 1 0;
 }
 
 .post-texts {
@@ -276,7 +275,7 @@ main {
     display: flex;
     gap: 10px;
     justify-content: space-between;
-    flex: 1 0 auto;
+    flex: 0 0 auto;
 }
 
 .posts-header {
