@@ -8,7 +8,7 @@ require('components/header.php');
 <main>
 <div class="bg-blues"></div>
 
-    <div class="posts-container box">
+    <div class="container box">
         <div class="filter-menu">
             <ul>
                 <li id="back-to-editor-button"><a class="midbutton" href="/feed_editor.php"><i class="fa-solid fa-arrow-left"></i> back</a></li>
