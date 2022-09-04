@@ -57,6 +57,7 @@ const codeList = new Map([
     ["12", "A group is already registered with this name!"],
     ["13", "New group created!"],
     ["14", "Session closed. Login required!"],
+    ["15", "Just testing..."],
 ]);
 
 const msgCodesInUrl = url.searchParams.getAll("msg");
