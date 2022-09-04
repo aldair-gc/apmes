@@ -23,6 +23,7 @@ require('php/cache.php');
             <li id="burgermenu"><i class="fa-sharp fa-solid fa-bars"></i></li>
             <li class="menu-opt"><a href="/index.php">Home</a></li>
             <li class="menu-opt"><a href="/feed.php">Feed</a></li>
+            <li class="menu-opt"><a href="/contact.php">Contact</a></li>
         </ul>
     </nav>
     <div class="msg-container"></div>
