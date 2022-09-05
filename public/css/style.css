@@ -466,6 +466,7 @@ footer a:hover {
     flex-direction: column;
     gap: 5px;
     width: 30%;
+    min-width: 300px;
     padding: 20px;
     text-align: center;
 }
