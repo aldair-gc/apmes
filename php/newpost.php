@@ -4,12 +4,12 @@ require_once('db.php');
 
 // check if the fields exist
 if (!isset($_POST['groupname'], $_POST['title'], $_POST['content'])) {
-    header('Location: /feed_newpost.php?msg=5');
+    header('Location: /feed_newpost.php?msg=ee');
 }
 
 // check if the fields are not empty
 if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['content'])) {
-    header('Location: /feed_newpost.php?msg=6');
+    header('Location: /feed_newpost.php?msg=ef');
 }
 
 // handle submitted file
@@ -30,9 +30,9 @@ if (!isset($_FILES['file']) || empty($_FILES['file'])) {
 if ($stmt = $conn->prepare('INSERT INTO posts (groupname, title, content, file) VALUES (?, ?, ?, ?)')) {
     $stmt->bind_param('ssss', $_POST['groupname'], $_POST['title'], $_POST['content'], $loadpath);
     $stmt->execute();
-    header('Location: /feed_editor.php');
+    header('Location: /feed_editor.php?msg=sj');
 } else {
-    header('Location: /feed_editor.php?msg=3');
+    header('Location: /feed_editor.php?msg=ec');
 }
 
 $conn->close();

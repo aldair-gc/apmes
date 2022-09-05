@@ -684,12 +684,6 @@ footer a:hover {
 
 }
 
-.msg-container i {
-    padding-right: 15px;
-    font-size: x-large;
-    color: #aa0000;
-}
-
 .msg {
     position: relative;
     display: none;
@@ -709,15 +703,51 @@ footer a:hover {
     overflow: hidden;
 }
 
+.msg-container .fa-circle-check {
+    color: #00aa00;
+}
+
+.msg-container .fa-circle-exclamation {
+    color: #aa0000;
+}
+
+.msg-container .fa-circle-info {
+    color: #0000aa;
+}
+
+.msg-container .fa-circle-xmark {
+    color: #aaaa00;
+}
+
 .msg-bar {
     position: absolute;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, #aa0000 10%);
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     -webkit-animation: 5s forwards 0s msgbar;
     animation: 5s forwards linear 0s msgbar;
+}
+
+.msg-container i {
+    padding-right: 15px;
+    font-size: x-large;
+}
+
+.fa-circle-check+.msg-bar {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, #00aa00 10%);
+}
+
+.fa-circle-exclamation+.msg-bar {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, #aa0000 10%);
+}
+
+.fa-circle-info+.msg-bar {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, #0000aa 10%);
+}
+
+.fa-circle-xmark+.msg-bar {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, #aaaa00 10%);
 }
 
 .show {

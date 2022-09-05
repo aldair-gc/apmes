@@ -43,21 +43,31 @@ if (filters) {
 
 // Make the messages from url codes
 const codeList = new Map([
-    ["1", "Wrong password!"],
-    ["2", "Email not registered!"],
-    ["3", "Error processing request!"],
-    ["4", "Could not prepare statement!"],
-    ["5", "Missing data!"],
-    ["6", "All field must be fulfilled!"],
-    ["7", "Invalid email!"],
-    ["8", "Password must be between 5 and 20 characters long!"],
-    ["9", "Email already registered!"],
-    ["10", "Post edited successfully!"],
-    ["11", "Post deleted successfully!"],
-    ["12", "A group is already registered with this name!"],
-    ["13", "New group created!"],
-    ["14", "Session closed. Login required!"],
-    ["15", "Just testing..."],
+    ["a", "Wrong password!"],
+    ["b", "Email not registered!"],
+    ["c", "Error processing request!"],
+    ["d", "Could not prepare statement!"],
+    ["e", "Missing data!"],
+    ["f", "All field must be fulfilled!"],
+    ["g", "Invalid email!"],
+    ["h", "Password must be between 5 and 20 characters long!"],
+    ["i", "Email already registered!"],
+    ["j", "Post edited successfully!"],
+    ["k", "Post deleted successfully!"],
+    ["l", "A group is already registered with this name!"],
+    ["m", "New group created!"],
+    ["n", "Session closed. Login required!"],
+    ["o", "User registered succesfully! Now you can login."],
+    ["p", "Login successfull. Welcome!"],
+    ["q", "User logged out!"],
+]);
+
+// Msg types: s(success), f(failure)
+const statusList = new Map([
+    ["s", `<i class="fa-solid fa-circle-check"></i>`],
+    ["e", `<i class="fa-solid fa-circle-exclamation"></i>`],
+    ["i", `<i class="fa-solid fa-circle-info"></i>`],
+    ["d", `<i class="fa-solid fa-circle-xmark"></i>`],
 ]);
 
 const msgCodesInUrl = url.searchParams.getAll("msg");
@@ -69,8 +79,8 @@ window.onload = function () {
     msgCodesInUrl.map((code) => {
         html += `
         <div class="msg show">
-            <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
-            ${codeList.get(code)}
+            ${statusList.get(code[0])}
+            ${codeList.get(code[1])}
             <div class="msg-bar"></div>
         </div>
         `;
@@ -100,6 +110,7 @@ burgerMenu.addEventListener("click", () => {
     });
 });
 
+// Resize fix for hamburgermenu
 window.addEventListener("resize", () => {
     if (innerWidth > 700) {
         burgerMenu.style.display = "none";
