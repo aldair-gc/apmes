@@ -19,7 +19,7 @@ require('components/header.php');
             </ul>
             <ul id="filter-right-menu">
                 <li><a class="midbutton" href="/feed_newpost.php"><i class="fa-solid fa-plus"></i> new post</a></li>
-                <li><a class="midbutton" href="/groups.php"><i class="fa-solid fa-object-group"></i> new group</a></li>
+                <li><a class="midbutton" href="/groups.php"><i class="fa-solid fa-object-group"></i> groups</a></li>
             </ul>
         </div>
 

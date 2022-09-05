@@ -37,7 +37,7 @@ require('components/header.php');
 
                     <?php while ($row = mysqli_fetch_array($groups)) { ?>
                         <div class="radio-option">
-                            <input type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>">
+                            <input class="hidden" type="radio" name="groupname" id="<?php echo $row['groupname']; ?>" value="<?php echo $row['groupname']; ?>">
                             <label for="<?php echo $row['groupname']; ?>"><?php echo $row['groupname']; ?></label>
                         </div>
                     <?php } ?>
