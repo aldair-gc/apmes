@@ -33,11 +33,12 @@ require('components/header.php');
             <ul id="groups-list">
 
             <?php while ($row = mysqli_fetch_array($groups)) { ?>
-                <li class="smallbutton no-link"><?php echo $row['groupname']; ?></li>
-                <a class="minibutton font-red"
-                    href="<?php echo '/group_delete.php?groupname=' . $row['groupname']; ?>">
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </a>
+                <li class="smallbutton no-link"><?php echo $row['groupname']; ?>
+                    <a class="minibutton font-red"
+                        href="<?php echo '/group_delete.php?groupname=' . $row['groupname']; ?>">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </a>
+                </li>
             <?php } ?>
 
             </ul>
