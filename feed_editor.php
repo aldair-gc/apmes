@@ -25,7 +25,7 @@ require('components/header.php');
 
         <div class="post-container">
             <?php while ($row = mysqli_fetch_array($posts)) { ?>
-                <?php $filechecked = ($row['file'] === '') ? '/public/images/bible-2110439_640.jpg' : $row['file'] ?>
+                <?php $filechecked = ($row['file'] === '') ? '/public/images/logo3DPaper_1200.jpg' : $row['file'] ?>
 
                 <div class="post <?php echo $row['groupname']; ?>">
                     <img class="post-media" src="<?php echo $filechecked; ?>"></img>
