@@ -111,3 +111,16 @@ window.addEventListener("resize", () => {
     }
 });
 
+// Carousel slider
+const carousels = document.querySelectorAll(".carousel_activator");
+setInterval(function rotate() {
+    for (let i = (carousels.length - 1); i >= 0; i--) {
+        let next = i === (carousels.length - 1) ? 0 : (i + 1);
+        if (carousels[i].checked) {
+            carousels[next].checked = true;
+            carousels[i].checked = false;
+            return;
+        }
+    }
+}, 5000);
+
