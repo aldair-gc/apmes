@@ -529,14 +529,20 @@ footer a:hover {
 }
 
 .radio-option {
-    display: inline-block;
-    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #fff;
     padding: 5px;
     border: 1px solid #027db6;
     border-radius: 8px;
-    height: 30px;
     cursor: default;
+    flex: 0 0 1;
+}
+
+.radio-option:checked+label {
+    background: #027db6;
+    color: #fff;
 }
 
 .form-box {

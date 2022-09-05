@@ -21,8 +21,8 @@ require('components/header.php');
             <ul>
                 <li>
                     <a class="midbutton" href="/groups.php">
-                        <i class="fa-regular fa-square-plus"></i>
-                        new group
+                        <i class="fa-solid fa-object-group"></i>
+                        groups
                     </a>
                 </li>
             </ul>
