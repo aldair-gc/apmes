@@ -20,7 +20,7 @@ require('components/header.php');
             </ul>
             <ul>
                 <li>
-                    <a class="midbutton" href="/feed_newgroup.php">
+                    <a class="midbutton" href="/groups.php">
                         <i class="fa-regular fa-square-plus"></i>
                         new group
                     </a>

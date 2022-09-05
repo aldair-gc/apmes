@@ -478,6 +478,16 @@ footer a:hover {
     display: none;
 }
 
+.minibutton {
+    display: flex;
+    border: 0;
+    cursor: pointer;
+    color: #000;
+    transform: translate(-27px, -2px);
+    font-size: 20px;
+    border-radius: 50%;
+}
+
 .smallbutton {
     display: flex;
     align-items: center;
@@ -526,7 +536,7 @@ footer a:hover {
     max-width: 90%;
 }
 
-.bg-red {
+.font-red {
     color: #aa0000 !important;
 
 }

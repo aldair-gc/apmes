@@ -60,6 +60,7 @@ const codeList = new Map([
     ["o", "User registered succesfully! Now you can login."],
     ["p", "Login successfull. Welcome!"],
     ["q", "User logged out!"],
+    ["r", "Group deleted successfully!"],
 ]);
 
 // Msg types: s(success), f(failure)
@@ -105,7 +106,7 @@ burgerMenu.addEventListener("click", () => {
             burgerMenu.innerHTML = `<i class="fa-sharp fa-solid fa-bars"></i>`;
         } else {
             li.style.display = "flex";
-            burgerMenu.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+            burgerMenu.innerHTML = `<i class="fa-solid fa-circle-xmark"></i>`;
         }
     });
 });

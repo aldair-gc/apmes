@@ -29,11 +29,15 @@ require('components/header.php');
         </div>
 
         <div class="new-post post">
-            <h2>Create new group</h2>
+            <h2>Groups</h2>
             <ul id="groups-list">
 
             <?php while ($row = mysqli_fetch_array($groups)) { ?>
                 <li class="smallbutton"><?php echo $row['groupname']; ?></li>
+                <a class="minibutton font-red"
+                    href="<?php echo '/group_delete.php?groupname=' . $row['groupname']; ?>">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </a>
             <?php } ?>
 
             </ul>
@@ -41,7 +45,7 @@ require('components/header.php');
                 <label for="groupname">New group:</label>
                 <input type="text" name="groupname" id="groupname">
 
-                <input type="submit" value="Save">
+                <input type="submit" value="Create">
             </form>
         </div>
     </div>

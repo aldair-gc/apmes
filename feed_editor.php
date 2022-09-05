@@ -19,7 +19,7 @@ require('components/header.php');
             </ul>
             <ul id="filter-right-menu">
                 <li><a class="midbutton" href="/feed_newpost.php"><i class="fa-solid fa-plus"></i> new post</a></li>
-                <li><a class="midbutton" href="/feed_newgroup.php"><i class="fa-regular fa-square-plus"></i> new group</a></li>
+                <li><a class="midbutton" href="/feed_groups.php"><i class="fa-regular fa-square-plus"></i> new group</a></li>
             </ul>
         </div>
 
@@ -43,7 +43,7 @@ require('components/header.php');
                             <i class="fa-solid fa-pen-to-square"></i> edit
                         </a>
                         <a
-                            class="midbutton bg-red"
+                            class="midbutton font-red"
                             href="<?php echo '/post_delete.php?id=' . $row['id']; ?>">
                             <i class="fa-solid fa-eraser"></i> delete
                         </a>
