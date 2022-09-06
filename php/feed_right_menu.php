@@ -1,4 +1,5 @@
 <?php
+if (session_status() !== 2) session_start();
 if (isset($_SESSION['loggedin'])) { ?>
 
     <ul id="filter-right-menu">
