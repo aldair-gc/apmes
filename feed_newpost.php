@@ -51,7 +51,7 @@ require('components/header.php');
                 <textarea name="content" id="content" cols="30" rows="10"></textarea>
 
                 <label for="file">Picture, video or audio:</label>
-                <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
+                <input type="hidden" name="MAX_FILE_SIZE" value="100000000">
                 <input type="file" name="file" id="file">
 
                 <input type="submit" value="Save">

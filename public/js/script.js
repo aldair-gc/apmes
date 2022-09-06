@@ -61,6 +61,8 @@ const codeList = new Map([
     ["p", "Login successfull. Welcome!"],
     ["q", "User logged out!"],
     ["r", "Group deleted successfully!"],
+    ["s", "New post created successfully!"],
+    ["t", "You'll receive an e-mail to reset your password."],
 ]);
 
 // Msg types: s(success), f(failure)

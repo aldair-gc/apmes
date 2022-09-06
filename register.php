@@ -5,7 +5,7 @@ require('components/header.php');
 <main>
 <div class="bg-blues"></div>
 
-    <div class="form-box box">
+    <div class="form-box register box">
         <h1>Register</h1>
         <form action="/php/register.php" method="post">
             <label for="text">Name</label>
@@ -18,7 +18,6 @@ require('components/header.php');
         </form>
         <div>
             <a href="/login.php">Already registered</a>
-            <a href="#">Forgot the password</a>
         </div>
     </div>
 </main>

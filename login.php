@@ -16,7 +16,7 @@ require('components/header.php');
         </form>
         <div>
             <a href="/register.php">Register new user</a>
-            <a href="#">Forgot the password</a>
+            <a href="/login.php?msg=it">Forgot the password</a>
         </div>
     </div>
 </main>

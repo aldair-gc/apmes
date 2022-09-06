@@ -14,5 +14,6 @@ ToDo's
 - prepare radio model page
 - fulfill footer
 - add pr-BR support
+- add recover support for deleted posts
 - check final details
 
