@@ -6,7 +6,7 @@
 
                 <?php } else { ?>
                     <?php $filechecked = ($row['file'] === '') ? '/public/images/logo3DPaper_1200.jpg' : $row['file'] ?>
-                    <?php $ext = strtolower(end(explode('.', $row['file']))); ?>
+                    <?php $exploded = explode('.', $row['file']); $ext = strtolower(end($exploded)); ?>
                     <?php if ($ext === 'jpg' || $ext === 'jpeg' || $ext === 'gif' || $ext === 'png' || $ext === 'heic') { ?>
 
                         <img class="post-media" src="<?php echo $filechecked; ?>">The image could not be loaded.</img>
