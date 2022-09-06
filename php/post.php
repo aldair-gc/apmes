@@ -2,7 +2,7 @@
 
                 <?php if ($row['youtubeurl'] !== '') { ?>
 
-                    <iframe width="560" height="315" src="<?php echo $row['youtubeurl'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $row['youtubeurl'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                 <?php } else { ?>
                     <?php $filechecked = ($row['file'] === '') ? '/public/images/logo3DPaper_1200.jpg' : $row['file'] ?>

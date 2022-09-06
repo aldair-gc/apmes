@@ -14,7 +14,7 @@ if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['conten
 
 // handle submitted file
 if (!isset($_FILES['file']) || empty($_FILES['file'])) {
-    $uploadfile = '';
+    $loadpath = '';
 } else {
     $uploaddir = '../uploads/';
     $origfilename = $_FILES['file']['name'];
@@ -28,10 +28,11 @@ if (!isset($_FILES['file']) || empty($_FILES['file'])) {
 }
 
 // handle youtube url
-if(!isset($_POST['youtubeurl']) || empty($_POST['youtubeurl'])) {
+if (!isset($_POST['youtubeurl']) || empty($_POST['youtubeurl'])) {
     $youtube = '';
 } else {
-    $youtube = $_POST['youtubeurl'];
+    $url_exploded = explode('/', $_POST['youtubeurl']);
+    $youtube = end($url_exploded);
 }
 
 // save the new post in the database
