@@ -21,7 +21,7 @@ require('components/header.php');
         <div class="post-container">
             <?php while ($row = mysqli_fetch_array($posts)) { ?>
                 <?php $filechecked = ($row['file'] === '') ? '/public/images/logo3DPaper_1200.jpg' : $row['file'] ?>
-                <?php $ext = end(explode('.', $row['file'])); ?>
+                <?php $ext = strtolower(end(explode('.', $row['file']))); ?>
 
                 <div class="post <?php echo $row['groupname']; ?>">
                     
