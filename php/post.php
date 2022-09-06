@@ -5,7 +5,9 @@
                     
                     <?php if ($ext === 'jpg' || $ext === 'jpeg' || $ext === 'gif' || $ext === 'png' || $ext === 'heic') { ?>
 
-                        <img class="post-media" src="<?php echo $filechecked; ?>"></img>
+                        <img class="post-media" src="<?php echo $filechecked; ?>">
+                            The image could not be loaded.
+                        </img>
                         
                     <?php } elseif ($ext === 'mov' || $ext === 'mpg' || $ext === 'mpeg' || $ext === 'avi' || $ext === 'wmv' ||
                     $ext === 'ogg' || $ext === 'mp4' || $ext === 'webm') { ?>
@@ -14,6 +16,14 @@
                             <source src="<?php echo $filechecked; ?>">
                             Your browser does not support the video tag.
                         </video>
+
+                    <?php } elseif ($ext === 'mid' || $ext === 'midi' || $ext === 'wma' || $ext === 'aac' || $ext === 'wav' ||
+                    $ext === 'mp3') { ?>
+
+                        <audio class="post-media" controls>
+                            <source src="<?php echo $filechecked; ?>">
+                            Your browser does not support the audio tag.
+                        </audio>
                     
                     <?php } ?>
 

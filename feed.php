@@ -16,15 +16,15 @@ require('components/header.php');
                     <li id="<?php echo $row['groupname']; ?>" class="groupname smallbutton"><?php echo $row['groupname']; ?></li>
                 <?php } ?>
             </ul>
+
+            <?php require('php/feed_right_menu.php') ?>
+
         </div>
 
         <div class="post-container">
-            <?php while ($row = mysqli_fetch_array($posts)) { ?>
-                <?php require('php/post.php') ?>
 
-                </div>
+            <?php require('php/buildposts.php') ?>
 
-            <?php } ?>
         </div>
     </div>
 </main>
