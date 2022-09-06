@@ -31,7 +31,7 @@ if (!isset($_FILES['file']) || empty($_FILES['file'])) {
 if(!isset($_POST['youtubeurl']) || empty($_POST['youtubeurl'])) {
     $youtube = '';
 } else {
-    $youtube = '<iframe width="560" height="315" src="' . $_POST['youtubeurl'] . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    $youtube = $_POST['youtubeurl'];
 }
 
 // save the new post in the database
