@@ -18,6 +18,8 @@ if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['conten
 if (!isset($_FILES['file']) || empty($_FILES['file']) || $_FILES['file'] == '') {
     $loadpath = '';
 } else {
+    header('Location: /newpost.php?m=' . $_FILES['file']);
+    exit();
     $uploaddir = '../uploads/';
     $origfilename = $_FILES['file']['name'];
     $exploded = explode('.', $origfilename);
