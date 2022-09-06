@@ -21,9 +21,24 @@ require('components/header.php');
         <div class="post-container">
             <?php while ($row = mysqli_fetch_array($posts)) { ?>
                 <?php $filechecked = ($row['file'] === '') ? '/public/images/logo3DPaper_1200.jpg' : $row['file'] ?>
+                <?php $ext = end(explode('.', $row['file'])); ?>
 
                 <div class="post <?php echo $row['groupname']; ?>">
-                    <img class="post-media" src="<?php echo $filechecked; ?>"></img>
+                    
+                    <?php if ($ext === 'jpg' || $ext === 'jpeg' || $ext === 'gif' || $ext === 'png' || $ext === 'heic') { ?>
+
+                        <img class="post-media" src="<?php echo $filechecked; ?>"></img>
+                        
+                    <?php } elseif ($ext === 'mov' || $ext === 'mpg' || $ext === 'mpeg' || $ext === 'avi' || $ext === 'wmv' ||
+                    $ext === 'ogg' || $ext === 'mp4' || $ext === 'webm') { ?>
+
+                        <video class="post-media" controls>
+                            <source src="<?php echo $filechecked; ?>">
+                            Your browser does not support the video tag.
+                        </video>
+                    
+                    <?php } ?>
+
                     <div class="post-texts">
                         <div class="posts-header">
                             <div class="posts-title"><?php echo $row['title']; ?></div>
