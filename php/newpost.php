@@ -15,7 +15,7 @@ if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['conten
 }
 
 // handle submitted file
-if (!isset($_FILES['file']) || empty($_FILES['file'])) {
+if (!isset($_FILES['file']) || empty($_FILES['file']) || $_FILES['file'] == '') {
     $loadpath = '';
 } else {
     $uploaddir = '../uploads/';
