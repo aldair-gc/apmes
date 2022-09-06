@@ -31,8 +31,7 @@
             <li class="menu-opt"><a href="/feed.php">Feed</a></li>
             <li class="menu-opt"><a href="/contact.php">Contact</a></li>
             
-            <?php session_start();
-            if (isset($_SESSION['loggedin'])) { ?>
+            <?php if (isset($_SESSION['loggedin'])) { ?>
 
                 <li class="menu-opt"><a class="font-red" href="/php/logout.php">Logout</a></li>
 
