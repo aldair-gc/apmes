@@ -15,11 +15,9 @@ if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['conten
 }
 
 // handle submitted file
-if (!isset($_FILES['file']) || empty($_FILES['file']) || $_FILES['file'] == '') {
+if (!isset($_FILES['file']['name']) || empty($_FILES['file']['name'])) {
     $loadpath = '';
 } else {
-    header('Location: /newpost.php?m=' . $_FILES['file']);
-    exit();
     $uploaddir = '../uploads/';
     $origfilename = $_FILES['file']['name'];
     $exploded = explode('.', $origfilename);
