@@ -27,13 +27,13 @@ if ($stmt = $conn->prepare('SELECT id FROM groups WHERE groupname = ?')) {
             $stmt->execute();
             header('Location: /groups.php?msg=sm');
         } else {
-            header('Location: /feed_editor.php?msg=ec');
+            header('Location: /feed.php?msg=ec');
         }
     }
 
     $stmt->close();
 } else {
-    header('Location: /feed_editor.php?msg=ed');
+    header('Location: /feed.php?msg=ed');
 }
 
 $conn->close();

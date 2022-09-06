@@ -17,18 +17,26 @@
 </head>
 
 <body>
-    <nav>
+    <header>
         <a id="logo" href="/index.php">
             <img src="/public/images/logo-png-small.png" alt="Logo">
             Apostolic & Prophetic Ministries El Shaddai
         </a>
+
+        <input id="menu-check" type="checkbox" name="menu-check" class="hidden">
+        <label id="menu-icon" for="menu-check">
+            <div id="menu-icon-a"></div>
+            <div id="menu-icon-b"></div>
+            <div id="menu-icon-c"></div>
+        </label>
+
         <ul id="menu">
-            <li id="burgermenu"><i class="fa-sharp fa-solid fa-bars"></i></li>
             <li class="menu-opt"><a href="/index.php">Home</a></li>
             <li class="menu-opt"><a href="/feed.php">Feed</a></li>
             <li class="menu-opt"><a href="/contact.php">Contact</a></li>
+            <li class="menu-opt"><a class="font-red" href="/php/logout.php">Logout</a></li>
         </ul>
-    </nav>
+    </header>
 
     <main>
         <div class="msg-container"></div>
@@ -242,17 +250,6 @@
                 <a href="/login.php">Management</a>
                 <a href="/login.php">Management</a>
                 <a href="/login.php">Management</a>
-
-                <div class="new-post post">
-                    <h2>Groups</h2>
-                    <ul id="groups-list">
-                        <li class="smallbutton no-link">groupname
-                            <a class="minibutton font-red" href="/group_delete.php">
-                                <i class="fa-solid fa-circle-xmark"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
 
             </div>
         </div>

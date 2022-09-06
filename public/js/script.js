@@ -99,29 +99,23 @@ window.onload = function () {
     });
 };
 
-// burgermenu
-const burgerMenu = document.querySelector("#burgermenu");
-burgerMenu.addEventListener("click", () => {
-    document.querySelectorAll(".menu-opt").forEach((li) => {
-        if (li.style.display === "flex") {
-            li.style.display = "none"
-            burgerMenu.innerHTML = `<i class="fa-sharp fa-solid fa-bars"></i>`;
-        } else {
-            li.style.display = "flex";
-            burgerMenu.innerHTML = `<i class="fa-solid fa-circle-xmark"></i>`;
-        }
-    });
-});
+// // menuIcon
+// const menuIcon = document.querySelector("#menu-icon");
+// menuIcon.addEventListener("click", () => {
+//     document.querySelectorAll(".menu-opt").forEach((li) => {
+//         if (li.style.display === "flex") {
+//             li.style.display = "none"
+//         } else {
+//             li.style.display = "flex";
+//         }
+//     });
+// });
 
-// Resize fix for hamburgermenu
+// Resize fix for menuIcon
+const menuCheck = document.querySelector("#menu-check");
 window.addEventListener("resize", () => {
     if (innerWidth > 700) {
-        burgerMenu.style.display = "none";
-        document.querySelectorAll(".menu-opt").forEach((li) => li.style.display = "flex");
-    } else {
-        burgerMenu.style.display = "flex";
-        burgerMenu.innerHTML = `<i class="fa-sharp fa-solid fa-bars"></i>`;
-        document.querySelectorAll(".menu-opt").forEach((li) => li.style.display = "none");
+        menuCheck.checked = false;
     }
 });
 

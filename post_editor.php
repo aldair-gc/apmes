@@ -14,7 +14,7 @@ $thispost = mysqli_fetch_array($post);
     <div class="posts-container box">
         <div class="filter-menu">
             <ul>
-                <li id="back-to-editor-button" class="midbutton"><a href="/feed_editor.php">back</a></li>
+                <li id="back-to-editor-button" class="midbutton"><a href="/feed.php">back</a></li>
             </ul>
             <ul>
                 <li id="new-group-button" class="midbutton"><a href="/groups.php">groups</a></li>

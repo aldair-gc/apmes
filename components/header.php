@@ -13,17 +13,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet"></head>
 
 <body>
-<nav>
+<header>
         <a id="logo" href="/index.php">
             <img src="/public/images/logo-png-small.png" alt="Logo">
             Apostolic & Prophetic Ministries El Shaddai
         </a>
+        <div id="burgermenu"><i class="fa-sharp fa-solid fa-bars"></i></div>
         <ul id="menu">
-            <li id="burgermenu"><i class="fa-sharp fa-solid fa-bars"></i></li>
             <li class="menu-opt"><a href="/index.php">Home</a></li>
             <li class="menu-opt"><a href="/feed.php">Feed</a></li>
             <li class="menu-opt"><a href="/contact.php">Contact</a></li>
+            
+            <?php session_start();
+            if (isset($_SESSION['loggedin'])) { ?>
+
+                <li class="menu-opt"><a class="font-red" href="/php/logout.php">Logout</a></li>
+
+            <?php } ?>
+
         </ul>
-    </nav>
+    </header>
     <div class="msg-container"></div>
     

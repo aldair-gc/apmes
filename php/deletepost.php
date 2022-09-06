@@ -6,9 +6,9 @@ require_once('db.php');
 if ($stmt = $conn->prepare('DELETE FROM posts WHERE id=?')) {
     $stmt->bind_param('i', $urlid);
     $stmt->execute();
-    header('Location: /feed_editor.php?msg=dk');
+    header('Location: /feed.php?msg=dk');
 } else {
-    header('Location: /feed_editor.php?msg=ec');
+    header('Location: /feed.php?msg=ec');
 }
 
 $conn->close();

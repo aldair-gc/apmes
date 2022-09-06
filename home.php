@@ -9,7 +9,7 @@ require('components/header.php');
     <div class="form-box box">
         <h1>Home</h1>
         <ul>
-            <il><a href="/feed_editor.php">Feed editor</a></il>
+            <il><a href="/feed.php">Feed editor</a></il>
         </ul>
     </div>
 

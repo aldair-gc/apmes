@@ -14,15 +14,26 @@ body {
     padding-top: 60px;
 }
 
-nav {
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 2;
+    gap: 20px;
+}
+
+
+/* HEADER - START */
+
+header {
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: space-between;
     background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.9));
-    padding: 10px;
     height: 60px;
     box-shadow: 0 0 5px #444;
     z-index: 10;
@@ -32,43 +43,89 @@ nav {
 }
 
 #logo {
-    font-size: 1.5em;
+    font-size: 18px;
     color: #000;
-    display: inherit;
+    display: flex;
     align-items: center;
-    gap: 5px;
-    width: calc(100% - 80px);
+    gap: 10px;
+    margin-left: 10px;
     text-decoration: none;
+    max-width: calc(100% - 70px);
+    flex: 0 1 1;
 }
 
 #logo img {
     width: 50px;
-    margin-right: 5px;
 }
 
-nav ul {
+#menu {
     display: flex;
+    gap: 10px;
+    margin-right: 10px;
 }
 
 #menu a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
     color: #000;
     cursor: pointer;
-    width: 100%;
-    height: 100%;
     text-align: center;
+    padding: 10px 5px;
 }
 
-main {
+.menu-opt {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 2;
-    gap: 20px;
+    height: 100%;
+    list-style: none;
+    font-size: 1em;
 }
+
+#menu-icon {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: content-box;
+    height: 20px;
+    width: 20px;
+    padding: 20px;
+}
+
+#menu-icon div {
+    height: 3px;
+    background-color: black;
+    transition: 0.6s;
+}
+
+#menu-icon-a {
+    transform: translateY(-5px);
+}
+
+#menu-icon-c {
+    transform: translateY(5px);
+}
+
+#menu-check:checked~#menu {
+    display: block;
+}
+
+#menu-check:checked~#menu-icon #menu-icon-a {
+    rotate: 45deg;
+    transform: translateY(2px);
+}
+
+#menu-check:checked~#menu-icon #menu-icon-b {
+    height: 0;
+    rotate: -45deg;
+}
+
+#menu-check:checked~#menu-icon #menu-icon-c {
+    rotate: -45deg;
+    transform: translateY(-2px);
+}
+
+
+/* HEADER - END */
+/* INTRO - START */
 
 .intro {
     display: flex;
@@ -89,6 +146,8 @@ main {
     min-width: 500px;
 }
 
+
+/* INTRO - END */
 /* SQUARES - START */
 
 .square-container {
@@ -466,7 +525,7 @@ footer a:hover {
     flex-direction: column;
     gap: 5px;
     width: 30%;
-    min-width: 300px;
+    min-width: 200px;
     padding: 20px;
     text-align: center;
 }
@@ -873,81 +932,54 @@ footer a:hover {
 /* RESPONSIVENESS - SMALL */
 
 @media (max-width: 700px) {
-    nav ul {
-        position: fixed;
-        left: 0;
-        right: 0;
-        margin: 0;
-        top: 0;
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
+    /* #logo {
+        font-size: 14px;
+    } */
+
+    #menu-icon {
+        display: flex;
     }
 
-    nav li:first-child {
-        width: auto;
-        align-self: flex-end;
-        margin-bottom: 8px;
+    #menu {
+        display: none;
+        position: fixed;
+        align-items: flex-end;
+        top: 60px;
+        right: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        flex: 1 0 1;
     }
 
     .menu-opt {
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
         background: rgba(255, 255, 255, 0.9);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
         width: 100%;
-        height: 60px;
-        list-style: none;
+        height: 45px;
         border-top: 1px solid #027db6;
-        font-size: 1.2em;
     }
 
-    nav li:not(:first-child):hover {
-        background: rgba(255, 255, 255, 1);
+    .menu-opt:last-child {
+        border-bottom: 1px solid #027db6;
     }
-
-    #logo {
-        font-size: 1.3em;
-    }
-
-    #burgermenu {
-        display: flex;
-        align-items: center;
-        font-size: 1.5em;
-        height: 60px;
-        margin: 0;
-        padding: 0 20px;
-    }
-
-    /* .post-media {
-        height: auto;
-        width: 100%;
-    } */
 }
+
 
 /* RESPONSIVENESS - BIG */
 
 @media (min-width: 700px) {
-    nav li:first-child {
+    #menuicon {
         display: none;
-    }
-
-    nav li:not(:first-child) {
-        display: block;
     }
 
     .menu-opt {
-        display: flex;
-        height: 100%;
-        list-style: none;
-        padding: 10px 20px;
-        font-size: 1.2em;
-    }
-
-    #burgermenu {
-        display: none;
+        display: block;
     }
 }
 

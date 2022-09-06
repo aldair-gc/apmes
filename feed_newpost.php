@@ -12,7 +12,7 @@ require('components/header.php');
         <div class="filter-menu">
             <ul>
                 <li>
-                    <a class="midbutton" href="/feed_editor.php">
+                    <a class="midbutton" href="/feed.php">
                         <i class="fa-solid fa-arrow-left"></i>
                         back
                     </a>
