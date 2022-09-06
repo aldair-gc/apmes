@@ -63,6 +63,7 @@ const codeList = new Map([
     ["r", "Group deleted successfully!"],
     ["s", "New post created successfully!"],
     ["t", "You'll receive an e-mail to reset your password."],
+    ["u", "Invalid characters! Group names must not include spaces."],
 ]);
 
 // Msg types: s(success), f(failure)

@@ -12,6 +12,11 @@ if (empty($_POST['groupname'])) {
     header('Location: /groups.php?msg=ef');
 }
 
+// check if the characters are valid
+if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['groupname']) == 0) {
+    header('Location: /groups.php?msg=eu');
+}
+
 // check if the group is already on the database
 if ($stmt = $conn->prepare('SELECT id FROM groups WHERE groupname = ?')) {
     $stmt->bind_param('s', $_POST['groupname']);
