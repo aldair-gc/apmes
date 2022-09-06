@@ -35,7 +35,7 @@ if(!isset($_POST['youtubeurl']) || empty($_POST['youtubeurl'])) {
 }
 
 // save the new post in the database
-if ($stmt = $conn->prepare('INSERT INTO posts (groupname, title, content, file, youtube) VALUES (?, ?, ?, ?, ?)')) {
+if ($stmt = $conn->prepare('INSERT INTO posts (groupname, title, content, file, youtubeurl) VALUES (?, ?, ?, ?, ?)')) {
     $stmt->bind_param('sssss', $_POST['groupname'], $_POST['title'], $_POST['content'], $loadpath, $youtube);
     $stmt->execute();
     header('Location: /feed.php?msg=ss');
