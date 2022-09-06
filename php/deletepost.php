@@ -9,6 +9,7 @@ if ($stmt = $conn->prepare('DELETE FROM posts WHERE id=?')) {
     header('Location: /feed.php?msg=dk');
 } else {
     header('Location: /feed.php?msg=ec');
+    exit();
 }
 
 $conn->close();

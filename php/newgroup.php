@@ -5,11 +5,13 @@ require_once('db.php');
 // check if the fields exist
 if (!isset($_POST['groupname'])) {
     header('Location: /groups.php?msg=ee');
+    exit();
 }
 
 // check if the fields are not empty
 if (empty($_POST['groupname'])) {
     header('Location: /groups.php?msg=ef');
+    exit();
 }
 
 // check if the characters are valid
@@ -34,12 +36,14 @@ if ($stmt = $conn->prepare('SELECT id FROM groups WHERE groupname = ?')) {
             header('Location: /groups.php?msg=sm');
         } else {
             header('Location: /feed.php?msg=ec');
+            exit();
         }
     }
 
     $stmt->close();
 } else {
     header('Location: /feed.php?msg=ed');
+    exit();
 }
 
 $conn->close();

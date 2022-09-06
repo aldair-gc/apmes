@@ -5,11 +5,13 @@ require_once('db.php');
 // check if the fields exist
 if (!isset($_POST['groupname'], $_POST['title'], $_POST['content'])) {
     header('Location: /newpost.php?msg=ee');
+    exit();
 }
 
 // check if the fields are not empty
 if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['content'])) {
     header('Location: /newpost.php?msg=ef');
+    exit();
 }
 
 // handle submitted file
@@ -42,6 +44,7 @@ if ($stmt = $conn->prepare('INSERT INTO posts (groupname, title, content, file, 
     header('Location: /feed.php?msg=ss');
 } else {
     header('Location: /feed.php?msg=ec');
+    exit();
 }
 
 $conn->close();

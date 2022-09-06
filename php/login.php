@@ -5,21 +5,24 @@ require_once('db.php');
 // check the submitted data
 if ( !isset($_POST['email'], $_POST['password']) ) {
     header('Location: /login.php?msg=ef');
+    exit();
 }
 
 if ( empty($_POST['email']) || empty($_POST['password']) ) {
     header('Location: /login.php?msg=ef');
+    exit();
 }
 
 // validate email
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
     header('Location: /register.php?msg=eg');
+    exit();
 }
 
 // character length check
 if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
     header('Location: /register.php?msg=eh');
-
+    exit();
 }
 
 // prepare SQL statement
@@ -41,9 +44,11 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
             header('Location: /home.php?msg=sp');
         } else {
             header('Location: /login.php?msg=ea');
+            exit();
         }
     } else {
         header('Location: /login.php?msg=eb');
+        exit();
     }
 
     $stmt->close();

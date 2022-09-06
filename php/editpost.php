@@ -5,11 +5,13 @@ require_once('db.php');
 // check if the fields exist
 if (!isset($_POST['groupname'], $_POST['title'], $_POST['content'], $_POST['id'])) {
     header('Location: /feed.php?msg=ee');
+    exit();
 }
 
 // check if the fields are not empty
 if (empty($_POST['groupname']) || empty($_POST['title']) || empty($_POST['content']) || empty($_POST['id'])) {
     header('Location: /feed.php?msg=ef');
+    exit();
 }
 
 // handle submitted file
@@ -39,6 +41,7 @@ if(!isset($_POST['youtubeurl']) || empty($_POST['youtubeurl'])) {
         header('Location: /feed.php?msg=sj');
     } else {
         header('Location: /feed.php?msg=ec');
+        exit();
     }
 } else {
     // save the new post in the database
@@ -48,6 +51,7 @@ if(!isset($_POST['youtubeurl']) || empty($_POST['youtubeurl'])) {
         header('Location: /feed.php?msg=sj');
     } else {
         header('Location: /feed.php?msg=ec');
+        exit();
     }
 }
 
