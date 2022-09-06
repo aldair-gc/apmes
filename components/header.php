@@ -31,9 +31,9 @@
             <li class="menu-opt"><a href="/feed.php">Feed</a></li>
             <li class="menu-opt"><a href="/contact.php">Contact</a></li>
             
-            <?php
-                echo session_status();
-                if (session_status() === PHP_SESSION_ACTIVE) { ?>
+            <?php 
+                if (session_status() !== 2) session_start();
+                if (isset($_SESSION['loggedin'])) { ?>
 
                 <li class="menu-opt"><a class="font-red" href="/php/logout.php">Logout</a></li>
 
