@@ -13,7 +13,7 @@ if (empty($_POST['groupname'])) {
 }
 
 // check if the characters are valid
-if (preg_match('/\S{1,20}/', $_POST['groupname']) == 0) {
+if (preg_match('/\s\g/', $_POST['groupname']) > 0) {
     header('Location: /groups.php?msg=eu');
 }
 
