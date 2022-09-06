@@ -4,7 +4,7 @@ require_once('php/db.php');
 require('php/fetch_groups.php');
 require('components/header.php');
 $urlid = htmlspecialchars($_GET["id"]);
-$post = mysqli_query($conn, "SELECT groupname, title, content FROM posts WHERE id=$urlid");
+$post = mysqli_query($conn, "SELECT groupname, title, content, youtubeurl FROM posts WHERE id=$urlid");
 $thispost = mysqli_fetch_array($post);
 ?>
 
@@ -48,6 +48,9 @@ $thispost = mysqli_fetch_array($post);
                     <label for="file">Picture, video or audio:</label>
                     <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
                     <input type="file" name="file" id="file">
+
+                    <label for="youtubeurl">YouTube url:</label>
+                    <input type="text" name="youtubeurl" id="youtubeurl" value="<?php echo $thispost['youtubeurl'] ?>">
 
                     <input type="hidden" name="id" value="<?php echo $urlid ?>">
 

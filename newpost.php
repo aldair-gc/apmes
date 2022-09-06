@@ -54,6 +54,9 @@ require('components/header.php');
                 <input type="hidden" name="MAX_FILE_SIZE" value="100000000">
                 <input type="file" name="file" id="file">
 
+                <label for="youtubeurl">YouTube url:</label>
+                <input type="text" name="youtubeurl" id="youtubeurl">
+
                 <input type="submit" value="Save">
             </form>
         </div>

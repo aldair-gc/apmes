@@ -20,7 +20,7 @@ require('components/header.php');
             </ul>
             <ul>
                 <li>
-                    <a class="midbutton" href="/feed_newpost.php">
+                    <a class="midbutton" href="/newpost.php">
                         <i class="fa-solid fa-plus"></i>
                         new post
                     </a>

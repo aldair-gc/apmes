@@ -24,9 +24,16 @@ if (isset($_FILES['file']['name']) && !empty($_FILES['file']['name'])) {
     
     move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
 
+// handle youtube url
+if(!isset($_POST['youtubeurl']) || empty($_POST['youtubeurl'])) {
+    $youtubeurl = '';
+} else {
+    $youtubeurl = $_POST['youtubeurl'];
+}
+
     // save the new post in the database
-    if ($stmt = $conn->prepare('UPDATE posts SET groupname=?, title=?, content=?, file=? WHERE id=?')) {
-        $stmt->bind_param('ssssi', $_POST['groupname'], $_POST['title'], $_POST['content'], $loadpath, $_POST['id']);
+    if ($stmt = $conn->prepare('UPDATE posts SET groupname=?, title=?, content=?, file=?, youtubeurl=? WHERE id=?')) {
+        $stmt->bind_param('sssssi', $_POST['groupname'], $_POST['title'], $_POST['content'], $loadpath, $youtubeurl, $_POST['id']);
         $stmt->execute();
         header('Location: /feed.php?msg=sj');
     } else {
@@ -34,8 +41,8 @@ if (isset($_FILES['file']['name']) && !empty($_FILES['file']['name'])) {
     }
 } else {
     // save the new post in the database
-    if ($stmt = $conn->prepare('UPDATE posts SET groupname=?, title=?, content=? WHERE id=?')) {
-        $stmt->bind_param('sssi', $_POST['groupname'], $_POST['title'], $_POST['content'], $_POST['id']);
+    if ($stmt = $conn->prepare('UPDATE posts SET groupname=?, title=?, content=?, youtubeurl=? WHERE id=?')) {
+        $stmt->bind_param('ssssi', $_POST['groupname'], $_POST['title'], $_POST['content'], $youtubeurl, $_POST['id']);
         $stmt->execute();
         header('Location: /feed.php?msg=sj');
     } else {
