@@ -24,24 +24,9 @@ require('components/header.php');
         </div>
 
         <div class="post-container">
-            <?php while ($row = mysqli_fetch_array($posts)) { ?>
-                <?php require('php/post.php') ?>
 
-                    <div class="post-control">
-                        <a
-                            class="midbutton"
-                            href="<?php echo '/post_editor.php?id=' . $row['id']; ?>">
-                            <i class="fa-solid fa-pen-to-square"></i> edit
-                        </a>
-                        <a
-                            class="midbutton font-red"
-                            href="<?php echo '/post_delete.php?id=' . $row['id']; ?>">
-                            <i class="fa-solid fa-eraser"></i> delete
-                        </a>
-                    </div>
-                </div>
+                <?php require('php/buildposts.php') ?>
 
-            <?php } ?>
         </div>
     </div>
 </main>
