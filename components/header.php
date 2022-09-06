@@ -18,7 +18,14 @@
             <img src="/public/images/logo-png-small.png" alt="Logo">
             Apostolic & Prophetic Ministries El Shaddai
         </a>
-        <div id="burgermenu"><i class="fa-sharp fa-solid fa-bars"></i></div>
+
+        <input id="menu-check" type="checkbox" name="menu-check" class="hidden">
+        <label id="menu-icon" for="menu-check">
+            <div id="menu-icon-a"></div>
+            <div id="menu-icon-b"></div>
+            <div id="menu-icon-c"></div>
+        </label>
+
         <ul id="menu">
             <li class="menu-opt"><a href="/index.php">Home</a></li>
             <li class="menu-opt"><a href="/feed.php">Feed</a></li>
