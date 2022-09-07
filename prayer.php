@@ -32,8 +32,8 @@ require('components/header.php');
                     <label for="name">Tel:</label>
                     <input type="tel" name="tel" id="tel" placeholder="Enter your phone number">
 
-                    <label for="content">Message:</label>
-                    <textarea name="content" id="content" cols="30" rows="10" placeholder="Write your message here"
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here"
                         autocorrect="on"></textarea>
 
                     <label for="file">Picture, video or audio:</label>
