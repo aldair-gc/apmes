@@ -21,6 +21,10 @@ main {
     gap: 20px;
 }
 
+input, textarea {
+    font-size: 16px;
+}
+
 
 /* HEADER - START */
 
@@ -1244,4 +1248,43 @@ footer a:hover {
     background-position: center;
 }
 
-/* FIM - CAROUSEL */
+
+/* CAROUSEL - END */
+/* HOME - START */
+
+#home-options {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#home-options a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    width: 180px;
+    height: 180px;
+    margin: 0;
+    transition: all .3s;
+}
+
+#home-options a:hover {
+    background-color: #027db6;
+    color: #fff;
+}
+
+#home-options i {
+    font-size: 60px;
+    width: 180px;
+    height: 70px;
+}
+/* HOME - END */
