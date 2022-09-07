@@ -15,7 +15,6 @@ require('components/header.php');
                         </a>
                     </li>
                 </ul>
-
             </div>
 
             <div class="new-post post">
@@ -29,7 +28,7 @@ require('components/header.php');
                     <label for="email">Email:</label>
                     <input type="email" name="email" id="email" placeholder="Enter your email">
 
-                    <label for="name">Tel:</label>
+                    <label for="tel">Tel:</label>
                     <input type="tel" name="tel" id="tel" placeholder="Enter your phone number">
 
                     <label for="message">Message:</label>
@@ -40,7 +39,7 @@ require('components/header.php');
                     <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
                     <input type="file" name="file" id="file">
 
-                    <input type="text" name="folder" id="folder" value="prayer" class="hidden">
+                    <input type="text" name="folder" value="prayer" class="hidden">
 
                     <input type="submit" value="Send">
                 </form>

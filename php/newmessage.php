@@ -34,8 +34,7 @@ if ($stmt = $conn->prepare('INSERT INTO messages (name, email, tel, message, fol
     $stmt->execute();
     header('Location: /prayer.php?msg=sx');
 } else {
-    header('Location: /prayer.php?msg=ec');
-    exit();
+    header('Location: /prayer.php?msg=ec&' . $stmt->error);
 }
 
 $conn->close();
