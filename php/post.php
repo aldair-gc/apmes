@@ -32,3 +32,5 @@
                     </div>
                     <div class="posts-content"><?php echo $row['content']; ?></div>
                 </div>
+
+            </div>

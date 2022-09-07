@@ -24,8 +24,6 @@
         
         <?php require('post.php') ?>
 
-        </div>
-
     <?php } ?>
 
 <?php } ?>
