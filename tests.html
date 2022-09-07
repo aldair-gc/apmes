@@ -54,44 +54,34 @@
                         </a>
                     </li>
                 </ul>
-                <ul>
-                    <li>
-                        <a class="midbutton" href="/groups.php">
-                            <i class="fa-solid fa-object-group"></i>
-                            groups
-                        </a>
-                    </li>
-                </ul>
+
             </div>
 
             <div class="new-post post">
-                <h2>Create new post</h2>
+                <h2>Prayer request</h2>
 
-                <form enctype="multipart/form-data" action="/php/newpost.php" method="POST">
-                    <label for="groupname">Group:</label>
-                    <div class="radio-list">
+                <form enctype="multipart/form-data" action="/php/newmessage.php" method="POST">
 
-                        <div class="radio-option">
-                            <input class="hidden" type="radio" name="groupname" id="groupname" value="groupname">
-                            <label for="groupname">groupname</label>
-                        </div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
 
-                    </div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
 
-                    <label for="title">Title:</label>
-                    <input type="text" name="title" id="title">
+                    <label for="name">Tel:</label>
+                    <input type="tel" name="tel" id="tel" placeholder="Enter your phone number">
 
-                    <label for="content">Text:</label>
-                    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                    <label for="content">Message:</label>
+                    <textarea name="content" id="content" cols="30" rows="10" placeholder="Write your message here"
+                        autocorrect="on"></textarea>
 
                     <label for="file">Picture, video or audio:</label>
-                    <input type="hidden" name="MAX_FILE_SIZE" value="100000000">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
                     <input type="file" name="file" id="file">
 
-                    <label for="youtubeurl">YouTube url:</label>
-                    <input type="text" name="youtubeurl" id="youtubeurl">
+                    <input type="text" name="folder" id="folder" value="prayer" class="hidden">
 
-                    <input type="submit" value="Save">
+                    <input type="submit" value="Send">
                 </form>
             </div>
         </div>

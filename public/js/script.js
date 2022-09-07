@@ -64,6 +64,8 @@ const codeList = new Map([
     ["s", "New post created successfully!"],
     ["t", "You'll receive an e-mail to reset your password."],
     ["u", "Invalid characters! Group names must not include spaces."],
+    ["v", "A message is required to send the request."],
+    ["x", "Message sent!"],
 ]);
 
 // Msg types: s(success), f(failure)

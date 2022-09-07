@@ -11,7 +11,7 @@
                     <?php $exploded = explode('.', $filechecked); $ext = strtolower(end($exploded)); ?>
                     <?php if ($ext === 'jpg' || $ext === 'jpeg' || $ext === 'gif' || $ext === 'png' || $ext === 'heic') { ?>
 
-                        <img class="post-media" src="<?php echo $filechecked; ?>">The image could not be loaded.</img>
+                        <img class="post-media" src="<?php echo $filechecked; ?>"></img>
 
                     <?php } elseif ($ext === 'mov' || $ext === 'mpg' || $ext === 'mpeg' || $ext === 'avi' || $ext === 'wmv' ||
                     $ext === 'ogg' || $ext === 'mp4' || $ext === 'webm') { ?>

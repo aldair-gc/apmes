@@ -22,7 +22,7 @@ if (!isset($_FILES['file']['name']) || empty($_FILES['file']['name'])) {
     $origfilename = $_FILES['file']['name'];
     $exploded = explode('.', $origfilename);
     $extension = end($exploded);
-    $newfilename = time() . '_' . rand(1000, 9999) . '.' . $extension;
+    $newfilename = 'post_' . time() . '_' . rand(1000, 9999) . '.' . $extension;
     $uploadfile = $uploaddir . $newfilename;
     $loadpath = '/uploads' . '/' . $newfilename;
     
