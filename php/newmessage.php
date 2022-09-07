@@ -3,13 +3,13 @@ require_once('db.php');
 
 // check if the fields exist
 if (!isset($_POST['name'], $_POST['email'], $_POST['tel'], $_POST['message'], $_POST['folder'])) {
-    header('Location: /newpost.php?msg=ee');
+    header('Location: /prayer.php?msg=ee');
     exit();
 }
 
 // check if the fields are not empty
 if (empty($_POST['message']) || empty($_POST['folder'])) {
-    header('Location: /newpost.php?msg=ev');
+    header('Location: /prayer.php?msg=ev');
     exit();
 }
 
