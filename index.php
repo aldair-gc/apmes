@@ -129,7 +129,7 @@ require('components/header.php');
                     <div class="square-image"></div>
                     <div class="square-text">
                         <h3></h3>
-                        <a href="/prayers.php">
+                        <a href="/prayer.php">
                             <h2>Prayers</h2>
                         </a>
                     </div>

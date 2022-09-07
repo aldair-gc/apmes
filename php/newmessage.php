@@ -1,5 +1,4 @@
 <?php
-require_once('session.php');
 require_once('db.php');
 
 // check if the fields exist
