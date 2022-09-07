@@ -7,13 +7,13 @@ require('components/header.php');
     <div class="bg-blues"></div>
 
     <div class="form-box box">
-        <h1>Home</h1>
-        <ul id=home-options>
-            <il><a href="/feed.php">Feed Manager</a></il>
-            <il><a href="/groups.php">Groups manager</a></il>
-            <il><a href="/newpost.php">New post</a></il>
-            <il><a href="/messages.php">Messages reader</a></il>
-        </ul>
+            <h1>Management</h1>
+            <ul id=home-options>
+                <li><a href="/feed.php"><i class="fa-solid fa-table-list"></i>Feed Manager</a></li>
+                <li><a href="/messages.php"><i class="fa-solid fa-envelope-open-text"></i>Messages reader</a></li>
+                <li><a href="/newpost.php"><i class="fa-solid fa-square-plus"></i>New post</a></li>
+                <li><a href="/groups.php"><i class="fa-solid fa-object-group"></i>Groups manager</a></li>
+            </ul>
     </div>
 
 </main>
