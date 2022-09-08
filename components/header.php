@@ -35,7 +35,7 @@
                 if (session_status() !== 2) session_start();
                 if (isset($_SESSION['loggedin'])) { ?>
 
-                <li class="menu-opt"><a class="font-red" href="/php/management.php"><i class="fa-solid fa-gear"></i></a></li>
+                <li class="menu-opt"><a class="font-red" href="/management.php"><i class="fa-solid fa-gear"></i></a></li>
 
             <?php } ?>
 
