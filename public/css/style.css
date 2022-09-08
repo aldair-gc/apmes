@@ -1303,4 +1303,13 @@ footer a:hover {
 }
 
 
+/* RESPONSIVENESS - SMALL HEIGHT */
+
+@media (max-height: 700px) {
+    .posts-content {
+        font-size: 10px;
+    }
+}
+
+
 /* RESPONSIVENESS - END */
