@@ -41,7 +41,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['email'] = $_POST['email'];
             $_SESSION['id'] = $id;
-            header('Location: /home.php?msg=sp');
+            header('Location: /management.php?msg=sp');
         } else {
             header('Location: /login.php?msg=ea');
             exit();

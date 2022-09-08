@@ -2,16 +2,16 @@
         <div class="footer-container">
             <div class="footer-col">
                 <h3>Site's map</h3>
-                <a href="/contact.php">Home</a>
-                <a href="/contact.php">The Church</a>
-                <a href="/contact.php">Our Family</a>
-                <a href="/contact.php">Feed</a>
-                <a href="/contact.php">Prayer Requests</a>
-                <a href="/contact.php">Missions</a>
-                <a href="/contact.php">Agenda</a>
-                <a href="/contact.php">Pictures</a>
-                <a href="/contact.php">Videos</a>
-                <a href="/contact.php">Find Us</a>
+                <a href="/index.php">Home</a>
+                <a href="/thechurch.php">The Church</a>
+                <a href="/ourfamily.php">Our Family</a>
+                <a href="/feed.php">Feed</a>
+                <a href="/prayer.php">Prayer Requests</a>
+                <a href="/missions.php">Missions</a>
+                <a href="/agenda.php">Agenda</a>
+                <a href="/pictures.php">Pictures</a>
+                <a href="/videos.php">Videos</a>
+                <a href="/contact.php">Contact Us</a>
             </div>
             <div class="footer-col">
                 <h3>Recomendations</h3>

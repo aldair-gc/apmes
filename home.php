@@ -13,6 +13,7 @@ require('components/header.php');
                 <li><a href="/messages.php"><i class="fa-solid fa-envelope-open-text"></i>Messages reader</a></li>
                 <li><a href="/newpost.php"><i class="fa-solid fa-square-plus"></i>New post</a></li>
                 <li><a href="/groups.php"><i class="fa-solid fa-object-group"></i>Groups manager</a></li>
+                <li><a class="font-red" href="/php/logout.php"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
             </ul>
     </div>
 
