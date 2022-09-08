@@ -1309,6 +1309,15 @@ footer a:hover {
     .posts-content {
         font-size: 10px;
     }
+    #home-options a {
+        width: 120px;
+        height: 120px;
+    }
+    #home-options i {
+        font-size: 40px;
+        width: 120px;
+        height: 50px;
+    }
 }
 
 
