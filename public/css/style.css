@@ -21,7 +21,8 @@ main {
     gap: 20px;
 }
 
-input, textarea {
+input,
+textarea {
     font-size: 16px;
 }
 
@@ -471,7 +472,16 @@ header {
     text-decoration: none;
 }
 
+
 /* POSTS - END */
+/* MESSAGE - START */
+
+.message-text {
+    gap: 10px;
+}
+
+
+/* MESSAGE - END */
 /* FILTER-MENU - START */
 
 #filters {
@@ -1278,10 +1288,12 @@ footer a:hover {
     .menu-opt:last-child {
         border-bottom: 1px solid #027db6;
     }
+
     #home-options a {
         width: 120px;
         height: 120px;
     }
+
     #home-options i {
         font-size: 40px;
         width: 120px;
@@ -1309,10 +1321,12 @@ footer a:hover {
     .posts-content {
         font-size: 10px;
     }
+
     #home-options a {
         width: 120px;
         height: 120px;
     }
+
     #home-options i {
         font-size: 40px;
         width: 120px;

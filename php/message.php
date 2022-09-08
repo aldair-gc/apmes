@@ -11,11 +11,12 @@
 
                 <div class="message-text">
                     <div class="message-header">
-                        <div class="name"><?php echo $row['name']; ?></div>
-                        <div class="email"><?php echo $row['email']; ?></div>
-                        <div class="tel"><?php echo $row['tel']; ?></div>
-                        <div class="date"><?php echo $row['date']; ?></div>
+                        <div class="name">Name: <?php echo $row['name']; ?></div>
+                        <div class="email">Email: <?php echo $row['email']; ?></div>
+                        <div class="tel">Tel: <?php echo $row['tel']; ?></div>
+                        <div class="date">Date: <?php echo $row['date']; ?></div>
                     </div>
+                    <hr>
                     <div class="posts-content"><?php echo $row['message']; ?></div>
                 </div>
 
