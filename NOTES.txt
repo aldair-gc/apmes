@@ -1,5 +1,9 @@
 <script src="https://kit.fontawesome.com/2cc3b4dcd6.js" crossorigin="anonymous"></script>
 
+
+CHECK DATA BASE TO FIX THE EDIT BUG
+
+
 ToDo's
 - create message handler OK
 - prepare responsive design OK
