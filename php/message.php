@@ -1,7 +1,7 @@
             <div class="post <?php echo $row['folder']; ?>">
             
                 <div class="post-control">
-                    <a class="midbutton" href="<?php echo '/replymessage.php?id=' . $row['id']; ?>">
+                    <a class="midbutton" href="<?php echo 'mailto:' . $row['email']; ?>">
                         <i class="fa-solid fa-pen-to-square"></i>reply
                     </a>
                     <a class="midbutton font-red" href="<?php echo '/deletemessage.php?id=' . $row['id']; ?>">

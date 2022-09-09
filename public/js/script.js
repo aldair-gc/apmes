@@ -66,6 +66,7 @@ const codeList = new Map([
     ["u", "Invalid characters! Group names must not include spaces."],
     ["v", "A message is required to send the request."],
     ["x", "Message sent!"],
+    ["y", "Message deleted successfully!"],
 ]);
 
 // Msg types: s(success), f(failure)
