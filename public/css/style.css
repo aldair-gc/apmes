@@ -477,6 +477,10 @@ header {
 /* POSTS - END */
 /* MESSAGE - START */
 
+.prayer {
+    align-items: center;
+}
+
 .message-text {
     display: flex;
     flex-direction: column;
